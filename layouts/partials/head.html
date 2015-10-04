@@ -5,9 +5,12 @@
     {{ .Hugo.Generator }}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    {{ with .Site.Params.site_author }}<meta name="author" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
     {{ with .Site.Params.site_description }}<meta name="description" content="{{ . }}">{{ end }}
-    <link href="{{ .Site.BaseURL }}index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ if .RSSlink }}
+      <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+      <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
     <link rel="icon" href="{{ .Site.BaseURL }}favicon.ico">
     <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}/apple-touch-icon.png" />
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">

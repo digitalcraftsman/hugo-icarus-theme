@@ -1,0 +1,33 @@
+<div class="outer">
+<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="{{ .Site.BaseURL }}css/images/avatar.png">
+      {{ with .Site.Params.author}}<h2 id="name">{{ . }}</h2>{{ end }}
+      {{ with .Site.Params.bio }}<h3 id="title">{{ . }}</h3>{{ end }}
+      {{ with .Site.Params.location }}<span id="location"><i class="fa fa-map-marker"></i>{{ . }}</span>{{ end }}
+      {{ with .Site.Params.profile.follow_button }}
+          <a id="follow" href="{{ . }}">Follow</a>
+      {{ end }}
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        {{ len (where .Site.Pages "Type" "post") }}
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        {{ len .Site.Taxonomies.tags }}
+        <span>Tags</span>
+      </div>
+    </div>
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          {{ partial "social" . }}
+          <td><a href="{{ .RSSLink }}" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+</div><!-- // outer -->
