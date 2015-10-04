@@ -1,0 +1,47 @@
+<section id="main">
+    {{ range (where .Site.Pages "Type" "post") }}
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            {{ if isset .Params "banner" }}
+            <a href="{{ .Permalink }}" itemprop="url">
+                <img src="{{ .Site.BaseURL }}{{ .Params.banner }}" class="article-banner"> {{ end }}
+            </a>
+            <header class="article-header">
+                <h1 itemprop="name">
+                    <a class="article-title" href="{{ .Permalink }}">{{ .Title }}</a>
+                </h1>
+                <div class="article-meta">
+                    <div class="article-date">
+                        <i class="fa fa-calendar"></i>
+                        <a href="{{ .Permalink }}">
+                            <time datetime="{{ .Params.date }}" itemprop="datePublished">{{ .Date.Format "2006-02-01" }}</time>
+                        </a>
+                    </div>
+                    {{ if ge (len .Params.tags) 1 }}
+                    <div class="article-category">
+                        <i class="fa fa-folder"></i>
+                        {{ range .Params.tags }}
+                        <a class="article-category-link" href="#">{{ . }}</a>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </header>
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    {{ .Summary }}
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="{{ .Permalink }}">Read More</a>
+                </p>
+            </div>
+            <footer class="article-footer">
+                <a data-url="{{ .Permalink }}" class="article-share-link">Share</a>
+                <a href="{{ .Permalink }}/#disqus_thread" class="article-comment-link">Comments</a>
+            </footer>
+        </div>
+    </article>
+    {{ end }}
+</section>
+<!-- // main section -->
