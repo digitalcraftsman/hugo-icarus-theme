@@ -1,5 +1,6 @@
 <section id="main">
-    {{ range (where .Site.Pages "Type" "post") }}
+    {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+    {{ range $paginator.Pages }}
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             {{ if isset .Params "banner" }}
@@ -13,9 +14,7 @@
                 <div class="article-meta">
                     <div class="article-date">
                         <i class="fa fa-calendar"></i>
-                        <a href="{{ .Permalink }}">
-                            <time datetime="{{ .Params.date }}" itemprop="datePublished">{{ .Date.Format "2006-02-01" }}</time>
-                        </a>
+                        <time datetime="{{ .Params.date }}" itemprop="datePublished">{{ .Date.Format "2006-02-01" }}</time>
                     </div>
                     {{ if ge (len .Params.tags) 1 }}
                     <div class="article-category">
@@ -38,10 +37,14 @@
             </div>
             <footer class="article-footer">
                 <a data-url="{{ .Permalink }}" class="article-share-link">Share</a>
+                {{ if not (eq .Site.DisqusShortname "") }}
                 <a href="{{ .Permalink }}/#disqus_thread" class="article-comment-link">Comments</a>
+                {{end}}
             </footer>
         </div>
     </article>
     {{ end }}
+    
+    {{ partial "pagination" . }}
 </section>
 <!-- // main section -->
