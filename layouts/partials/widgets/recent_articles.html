@@ -1,0 +1,27 @@
+{{ if .Site.Params.widgets.recent_articles }}
+<div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+        <ul id="recent-post">
+            {{ range first 5 (where .Site.Pages "Type" "post") }}
+            <li>
+                {{ with .Params.banner }}
+                <div class="item-thumbnail">
+                    <a href="{{ $.Permalink }}" class="thumbnail">
+                        <span style="background-image:url({{ $.Site.BaseURL }}{{ . }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
+                    </a>
+                </div>
+                {{ end }}
+                <div class="item-inner">
+                    <p class="item-category"><a class="article-category-link" href="#">{{ if ge (len .Params.tags ) 1 }}{{ index .Params.tags 0 }}{{ end }}</a></p>
+                    <p class="item-title"><a href="{{ .Permalink }}" class="title">{{ .Title }}</a></p>
+                    <p class="item-date">
+                        <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "2006-02-01" }}</time>
+                    </p>
+                </div>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+{{ end }}
