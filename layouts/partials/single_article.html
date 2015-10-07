@@ -13,6 +13,12 @@
                         <i class="fa fa-calendar"></i>
                         <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "2006-02-01" }}</time>
                     </div>
+                    <div class="article-category">
+                        <i class="fa fa-folder"></i>
+                        {{ range .Params.categories }}
+                        <a class="article-category-link" href="{{ $.Site.BaseURL }}categories/{{ . }}">{{ . }}</a>
+                        {{ end }}
+                    </div>
                 </div>
             </header>
             <div class="article-entry" itemprop="articleBody">

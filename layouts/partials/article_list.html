@@ -16,11 +16,11 @@
                         <i class="fa fa-calendar"></i>
                         <time datetime="{{ .Params.date }}" itemprop="datePublished">{{ .Date.Format "2006-02-01" }}</time>
                     </div>
-                    {{ if ge (len .Params.tags) 1 }}
+                    {{ if gt (len .Params.categories) 0 }}
                     <div class="article-category">
                         <i class="fa fa-folder"></i>
-                        {{ range .Params.tags }}
-                        <a class="article-category-link" href="#">{{ . }}</a>
+                        {{ range .Params.categories }}
+                        <a class="article-category-link" href="{{ $.Site.BaseURL }}categories/{{ . }}">{{ . }}</a>
                         {{ end }}
                     </div>
                     {{ end }}
@@ -44,7 +44,7 @@
         </div>
     </article>
     {{ end }}
-    
+
     {{ partial "pagination" . }}
 </section>
 <!-- // main section -->
