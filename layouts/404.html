@@ -1,0 +1,26 @@
+{{ partial "head" . }}
+{{ partial "header" . }}
+
+<div id="container">
+   <div class="outer">
+    {{ partial "profile" . }}
+    <section id="main">
+        <article class="article article-type-post" itemscope="" itemprop="blogPost">
+            <div class="article-inner">
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        <center><h1>404 - page not found</h1>
+                        <h3>The content you're looking for doesn't seem to exist.</h3>
+                        </center>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
+    {{ partial "sidebar" . }}
+</div>
+</div>
+
+{{ partial "footer" . }}
+</body>
+</html>
