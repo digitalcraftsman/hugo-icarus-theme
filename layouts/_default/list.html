@@ -1,0 +1,26 @@
+{{ partial "head" . }} {{ partial "header" . }}
+
+<div id="container">
+    <div class="outer">
+        {{ partial "profile" . }}
+        <section id="main">
+            <section class="archives-wrap">
+                <div class="archive-category-wrap">
+                    <span class="archive-category">{{ .Title }}</span>
+                </div>
+                <div class="archives">
+                    {{ $paginator := .Paginate .Data.Pages }}
+                    {{ range $paginator.Pages }}
+                        {{ .Render "summary" }} 
+                    {{ end }}
+                </div>
+            </section>
+            {{ partial "pagination" . }}
+        </section>
+        {{ partial "sidebar" . }}
+    </div>
+</div>
+
+{{ partial "footer" . }}
+</body>
+</html>

@@ -1,0 +1,30 @@
+{{ partial "head" . }} {{ partial "header" . }}
+
+<div id="container">
+    <div class="outer">
+        {{ partial "profile" . }}
+        <section id="main">
+            <section class="layout-wrap">
+                <div class="layout-title">
+                    <span>{{ .Title }}</span>
+                </div>
+                <div class="layout-wrap-inner list-categories">
+                    <ul class="category-list">
+                        {{ $data := .Data }} {{ range $key, $value := .Data.Terms.ByCount }}
+                        <li class="category-list-item">
+                            <a class="category-list-link" href="{{ $value.Name | urlize }}">{{ $value.Name }}</a>
+                            <span class="category-list-count">{{ $value.Count }}</span>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </section>
+        </section>
+        {{ partial "sidebar" . }}
+    </div>
+</div>
+
+{{ partial "footer" . }}
+</body>
+
+</html>
