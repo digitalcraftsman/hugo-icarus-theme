@@ -1,6 +1,6 @@
 +++
 tags = []
 categories = []
-images = []
 menu = ""
+banner = ""
 +++
