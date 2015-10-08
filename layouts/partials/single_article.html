@@ -25,7 +25,7 @@
                 {{ .Content }}
             </div>
             <footer class="article-footer">
-                <a data-url="#" class="article-share-link">Share</a>
+                <a data-url="{{ .Permalink }}" data-id="{{ .UniqueID }}" class="article-share-link">Share</a>
                 <a href="#disqus_thread" class="article-comment-link">Comments</a>
             </footer>
         </div>

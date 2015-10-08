@@ -36,7 +36,7 @@
                 </p>
             </div>
             <footer class="article-footer">
-                <a data-url="{{ .Permalink }}" class="article-share-link">Share</a>
+                <a data-url="{{ .Permalink }}" data-id="{{ .UniqueID }}" class="article-share-link">Share</a>
                 {{ if not (eq .Site.DisqusShortname "") }}
                 <a href="{{ .Permalink }}/#disqus_thread" class="article-comment-link">Comments</a>
                 {{end}}
