@@ -13,7 +13,13 @@
                 </div>
                 {{ end }}
                 <div class="item-inner">
-                    <p class="item-category"><a class="article-category-link" href="#">{{ if ge (len .Params.tags ) 1 }}{{ index .Params.tags 0 }}{{ end }}</a></p>
+                    {{ if ge (len .Params.categories ) 1 }}
+                    <p class="item-category">
+                        <a class="article-category-link" href="{{ $.Site.BaseURL }}categories/{{ index .Params.categories 0 }}">
+                        {{ index .Params.categories 0 }}
+                        </a>
+                    </p>
+                    {{ end }}
                     <p class="item-title"><a href="{{ .Permalink }}" class="title">{{ .Title }}</a></p>
                     <p class="item-date">
                         <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "2006-02-01" }}</time>
