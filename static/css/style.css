@@ -1917,3 +1917,17 @@ pre .javascript .function {
 #recent-post li:hover .item-title a {
   color: #38b7ea;
 }
+
+/*
+
+    MathJax helpers
+
+*/
+
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
