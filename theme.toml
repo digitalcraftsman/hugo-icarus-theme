@@ -1,21 +1,18 @@
-# theme.toml template for a Hugo theme
-# See https://github.com/spf13/hugoThemes#themetoml for an example
-
-name = "Hugo Icarus Theme"
+name = "Icarus"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
-description = ""
-homepage = "http://siteforthistheme.com/"
-tags = ["", ""]
-features = ["", ""]
-min_version = 0.13
+licenselink = "//github.com/yourname/yourtheme/blob/master/LICENSE.md"
+description = "The blog theme you may fall in love with, coming to Hugo. "
+homepage = "//github.com/digitalcraftsman/hugo-icarus-theme"
+tags = ["syntax highlighting", "maxthjax", "rss", "gallery", "widgets", "google analytics", "useful shortcodes", "responsive"]
+features = ["syntax highlighting", "maxthjax", "rss", "gallery", "widgets", "google analytics", "useful shortcodes", "responsive"]
+min_version = 0.14
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Digitalcraftsman"
+  homepage = "//github.com/digitalcraftsman"
 
 # If porting an existing theme
 [original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Ruipeng Zhang"
+  homepage = "//blog.zhangruipeng.me"
+  repo = "//github.com/ppoffice/hexo-theme-icarus"
