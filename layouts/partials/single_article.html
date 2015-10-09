@@ -14,8 +14,8 @@
                         <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "2006-02-01" }}</time>
                     </div>
                     <div class="article-category">
-                        <i class="fa fa-folder"></i>
                         {{ range .Params.categories }}
+                        <i class="fa fa-folder"></i>
                         <a class="article-category-link" href="{{ $.Site.BaseURL }}categories/{{ . }}">{{ . }}</a>
                         {{ end }}
                     </div>
