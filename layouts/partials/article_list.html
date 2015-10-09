@@ -14,7 +14,7 @@
                 <div class="article-meta">
                     <div class="article-date">
                         <i class="fa fa-calendar"></i>
-                        <time datetime="{{ .Params.date }}" itemprop="datePublished">{{ .Date.Format "2006-02-01" }}</time>
+                        <time datetime="{{ .Params.date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
                     </div>
                     {{ if gt (len .Params.categories) 0 }}
                     <div class="article-category">

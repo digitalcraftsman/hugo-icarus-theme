@@ -13,7 +13,7 @@
             </h1>
             <div class="archive-article-date">
                 <i class="fa fa-calendar"></i>
-                <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "2006-02-01" }}</time>
+                <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
             </div>
         </header>
     </div>
