@@ -1,6 +1,8 @@
 {{ if .Site.Params.widgets.recent_articles }}
 <div class="widget-wrap">
-    <h3 class="widget-title">Recents</h3>
+    <h3 class="widget-title">
+        {{with .Site.Data.i10n.widgets.recent_articles.title}}{{.}}{{end}}
+    </h3>
     <div class="widget">
         <ul id="recent-post">
             {{ range first 5 (where .Site.Pages "Type" "post") }}

@@ -1,0 +1,10 @@
+<footer class="article-footer">
+    <a data-url="{{ .Permalink }}" data-id="{{ .UniqueID }}" class="article-share-link">
+        {{with .Site.Data.i10n.articles.share}}{{.}}{{end}}
+    </a>
+    {{ if not (eq .Site.DisqusShortname "") }}
+    <a href="{{ .Permalink }}/#disqus_thread" class="article-comment-link">
+        {{with .Site.Data.i10n.articles.comments}}{{.}}{{end}}
+    </a>
+    {{end}}
+</footer>

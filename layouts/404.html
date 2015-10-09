@@ -9,8 +9,13 @@
             <div class="article-inner">
                 <div class="article-entry" itemprop="articleBody">
                     <p>
-                        <center><h1>404 - page not found</h1>
-                        <h3>The content you're looking for doesn't seem to exist.</h3>
+                        <center>
+                        <h1>
+                            {{with .Site.Data.i10n.page_not_found.title}}{{.}}{{end}}
+                        </h1>
+                        <h3>
+                            {{with .Site.Data.i10n.page_not_found.subtitle}}{{.}}{{end}}
+                        </h3>
                         </center>
                     </p>
                 </div>

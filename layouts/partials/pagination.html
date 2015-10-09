@@ -1,10 +1,14 @@
 <nav id="page-nav">
 {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
     {{ if .Paginator.HasPrev }}
-        <a class="extend prev" rel="prev" href="{{.Paginator.Prev.URL}}">« Prev</a>
+        <a class="extend prev" rel="prev" href="{{.Paginator.Prev.URL}}">
+            « {{with.Site.i10n.pagination.previous}}{{.}}{{end}}
+        </a>
     {{ end }}
     {{ if .Paginator.HasNext }}
-        <a class="extend next" rel="next" href="{{.Paginator.Next.URL}}">Next »</a>
+        <a class="extend next" rel="next" href="{{.Paginator.Next.URL}}">
+            « {{with.Site.i10n.pagination.next}}{{.}}{{end}} »
+        </a>
     {{ end }}
 {{ end }}
 </nav>

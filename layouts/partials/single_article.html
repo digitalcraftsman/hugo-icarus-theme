@@ -24,10 +24,7 @@
             <div class="article-entry" itemprop="articleBody">
                 {{ .Content }}
             </div>
-            <footer class="article-footer">
-                <a data-url="{{ .Permalink }}" data-id="{{ .UniqueID }}" class="article-share-link">Share</a>
-                <a href="#disqus_thread" class="article-comment-link">Comments</a>
-            </footer>
+            {{ partial "article_footer" . }}
         </div>
 
         {{ partial "prev_next_post" . }}

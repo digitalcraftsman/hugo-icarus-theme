@@ -32,15 +32,12 @@
                     <br>
                 </p>
                 <p class="article-more-link">
-                    <a href="{{ .Permalink }}">Read More</a>
+                    <a href="{{ .Permalink }}">
+                        {{with .Site.Data.i10n.articles.read_more}}{{.}}{{end}}
+                    </a>
                 </p>
             </div>
-            <footer class="article-footer">
-                <a data-url="{{ .Permalink }}" data-id="{{ .UniqueID }}" class="article-share-link">Share</a>
-                {{ if not (eq .Site.DisqusShortname "") }}
-                <a href="{{ .Permalink }}/#disqus_thread" class="article-comment-link">Comments</a>
-                {{end}}
-            </footer>
+            {{ partial "article_footer" . }}
         </div>
     </article>
     {{ end }}
