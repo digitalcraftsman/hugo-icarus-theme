@@ -2,7 +2,7 @@
     <div class="article-gallery-photos">
         {{ range .Params }}
         <a class="article-gallery-img fancybox" href="{{ . }}" rel="group1">
-            <img src="{{ . }}" itemprop="image">
+            <img src="{{ . | absURL }}" itemprop="image">
         </a>
         {{ end }}
     </div>
