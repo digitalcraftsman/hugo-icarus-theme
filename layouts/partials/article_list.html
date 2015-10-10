@@ -3,7 +3,7 @@
     {{ range $paginator.Pages }}
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
-            {{ if isset .Params "banner" }}
+            {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
             <a href="{{ .Permalink }}" itemprop="url">
                 <img src="{{ .Site.BaseURL }}{{ .Params.banner }}" class="article-banner"> {{ end }}
             </a>
