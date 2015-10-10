@@ -1,6 +1,6 @@
 name = "Icarus"
 license = "MIT"
-licenselink = "//github.com/yourname/yourtheme/blob/master/LICENSE.md"
+licenselink = "//github.com/digitalcraftsman/hugo-icarus-theme/blob/master/LICENSE.md"
 description = "The blog theme you may fall in love with, coming to Hugo. "
 homepage = "//github.com/digitalcraftsman/hugo-icarus-theme"
 tags = ["syntax highlighting", "maxthjax", "rss", "gallery", "widgets", "google analytics", "useful shortcodes", "responsive"]
