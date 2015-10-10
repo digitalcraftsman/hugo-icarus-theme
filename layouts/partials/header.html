@@ -36,7 +36,8 @@
   </div>
   <div id="main-nav-mobile" class="header-sub header-inner">
     <table class="menu outer">
-      <tr>
+      <tbody>
+          <tr>
           {{ range .Site.Params.menu }}
           {{ if .before }}
           <td><a class="main-nav-link" href="{{ .link | absURL }}">{{ .label }}</a></td>
@@ -59,6 +60,7 @@
           </form>
         </td>
       </tr>
+      </tbody>
     </table>
   </div>
 </header>
