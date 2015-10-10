@@ -1,0 +1,23 @@
+<header class="article-header">
+    <h1 class="article-title" itemprop="name">
+        {{ .Title }}
+    </h1>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
+            &middot;
+            {{ .WordCount }}
+            {{ with .Site.Data.i10n.articles.words }}{{.}}{{end}}
+            &middot;
+            {{ .ReadingTime }}
+            {{ with .Site.Data.i10n.articles.readingtime }}{{.}}{{end}}
+        </div>
+        <div class="article-category">
+            {{ range .Params.categories }}
+            <i class="fa fa-folder"></i>
+            <a class="article-category-link" href="{{ $.Site.BaseURL }}categories/{{ . }}">{{ . }}</a>
+            {{ end }}
+        </div>
+    </div>
+</header>

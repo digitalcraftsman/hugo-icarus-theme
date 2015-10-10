@@ -7,25 +7,8 @@
             <a href="{{ .Permalink }}" itemprop="url">
                 <img src="{{ .Site.BaseURL }}{{ .Params.banner }}" class="article-banner"> {{ end }}
             </a>
-            <header class="article-header">
-                <h1 itemprop="name">
-                    <a class="article-title" href="{{ .Permalink }}">{{ .Title }}</a>
-                </h1>
-                <div class="article-meta">
-                    <div class="article-date">
-                        <i class="fa fa-calendar"></i>
-                        <time datetime="{{ .Params.date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
-                    </div>
-                    {{ if gt (len .Params.categories) 0 }}
-                    <div class="article-category">
-                        <i class="fa fa-folder"></i>
-                        {{ range .Params.categories }}
-                        <a class="article-category-link" href="{{ $.Site.BaseURL }}categories/{{ . }}">{{ . }}</a>
-                        {{ end }}
-                    </div>
-                    {{ end }}
-                </div>
-            </header>
+
+            {{ partial "article_header" . }}
             <div class="article-entry" itemprop="articleBody">
                 <p>
                     {{ .Summary }}
