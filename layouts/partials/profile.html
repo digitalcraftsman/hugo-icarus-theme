@@ -7,19 +7,19 @@
       {{ with .Site.Params.location }}<span id="location"><i class="fa fa-map-marker"></i>{{ . }}</span>{{ end }}
       {{ with .Site.Params.profile.follow_button }}
           <a id="follow" href="{{ . }}">
-              {{with $.Site.Data.i10n.profile.follow_button}}{{.}}{{end}}
+              {{with $.Site.Data.l10n.profile.follow_button}}{{.}}{{end}}
           </a>
       {{ end }}
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
         {{ len (where .Site.Pages "Type" "post") }}
-        <span>{{with .Site.Data.i10n.profile.posts}}{{.}}{{end}}</span>
+        <span>{{with .Site.Data.l10n.profile.posts}}{{.}}{{end}}</span>
       </div>
       <div class="article-info-block">
         {{ len .Site.Taxonomies.tags }}
         <span>
-            {{with .Site.Data.i10n.profile.tags}}{{.}}{{end}}
+            {{with .Site.Data.l10n.profile.tags}}{{.}}{{end}}
         </span>
       </div>
     </div>

@@ -10,10 +10,10 @@
             <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
             &middot;
             {{ .WordCount }}
-            {{ with .Site.Data.i10n.articles.words }}{{.}}{{end}}
+            {{ with .Site.Data.l10n.articles.words }}{{.}}{{end}}
             &middot;
             {{ .ReadingTime }}
-            {{ with .Site.Data.i10n.articles.readingtime }}{{.}}{{end}}
+            {{ with .Site.Data.l10n.articles.readingtime }}{{.}}{{end}}
         </div>
         <div class="article-category">
             {{ range .Params.categories }}

@@ -3,7 +3,7 @@
     {{ if .PrevInSection }}
     <a href="{{ .PrevInSection.Permalink }}" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
-          {{with .Site.Data.i10n.articles.linked_posts.older}}{{.}}{{end}}
+          {{with .Site.Data.l10n.articles.linked_posts.older}}{{.}}{{end}}
       </strong>
       <div class="article-nav-title">{{ .PrevInSection.Title }}</div>
     </a>
@@ -12,7 +12,7 @@
     {{ if .NextInSection }}
     <a href="{{ .NextInSection.Permalink }}" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
-          {{with .Site.Data.i10n.articles.linked_posts.newer}}{{.}}{{end}}
+          {{with .Site.Data.l10n.articles.linked_posts.newer}}{{.}}{{end}}
       </strong>
       <div class="article-nav-title">{{ .NextInSection.Title }}</div>
     </a>

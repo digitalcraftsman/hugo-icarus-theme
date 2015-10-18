@@ -7,7 +7,7 @@ banner = "banners/placeholder.png"
 categories = ["Lorem"]
 +++
 
-Icarus is a responsive and customizable theme for bloggers. It's a port of the same-named theme for [Hexo](//hexo.io) made by [Ruipeng Zhang](https://github.com/ppoffice). Noteworthy features of this Hugo theme are the integration of a comment-system powered by Disqus, localization (i10n) support, syntax highlighting for source code, optional widgets for the sidebar and a handful [shortcodes](http://gohugo.io/extras/shortcodes/) to make your life easier.
+Icarus is a responsive and customizable theme for bloggers. It's a port of the same-named theme for [Hexo](//hexo.io) made by [Ruipeng Zhang](https://github.com/ppoffice). Noteworthy features of this Hugo theme are the integration of a comment-system powered by Disqus, localization (l10n) support, syntax highlighting for source code, optional widgets for the sidebar and a handful [shortcodes](http://gohugo.io/extras/shortcodes/) to make your life easier.
 
 
 ## Get the theme
@@ -36,12 +36,12 @@ In the next step navigate to the `exampleSite` folder at `themes/hugo-icarus-the
     │       ├── linked-post.md
     │       └── migrate-from-jekyll.md
     ├── data
-    │   └── i10n.toml
+    │   └── l10n.toml
     └── static
         └── banners
             └── placeholder.png
 
-In order to get your site running, you need to copy `config.toml` and `data/i10n.toml` into the root folders.
+In order to get your site running, you need to copy `config.toml` and `data/l10n.toml` into the root folders.
 
 
 ## The config file
@@ -90,9 +90,9 @@ On the right, you can see some useful widgets that you can activate as you like.
         tag_cloud = true
 
 
-## Localization (i10n)
+## Localization (l10n)
 
-You don't blog in english and you want to translate the theme into your native locale? No problem. Take a look in the `data` folder and you'll find a file `i10n.toml` that we've copied at the beginning. It contains all strings related to the theme. Just replace the original strings with your own.
+You don't blog in english and you want to translate the theme into your native locale? No problem. Take a look in the `data` folder and you'll find a file `l10n.toml` that we've copied at the beginning. It contains all strings related to the theme. Just replace the original strings with your own.
 
 
 ## Linking thumbnails
