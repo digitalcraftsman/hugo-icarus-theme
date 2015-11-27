@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "Icarus"
 # Enable comments by entering your Disqus shortname
 disqusShortname = "spf13"
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
 # Define the number of posts per site
 paginate = 10
 theme = "hugo-icarus-theme"
@@ -19,9 +21,6 @@ theme = "hugo-icarus-theme"
     location = "Earth"
     site_description = ""
     copyright  = "Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
-
-    # Enable Google Analytics by entering your tracking code
-    google_analytics = ""
 
     # Format dates with Go's time formating
     date_format = "2006-01-02"
