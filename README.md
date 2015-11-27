@@ -91,8 +91,6 @@ You can deactivate them under `params.widgets`:
         tag_cloud = true
 
 
-
-
 ## Localization (l10n)
 
 You don't blog in english and you want to translate the theme into your native locale? No problem. Take a look in the `data` folder and you'll find a file `l10n.toml` that we've copied at the beginning. It contains all strings related to the theme. Just replace the original strings with your own.
@@ -127,15 +125,6 @@ This way you can include a gallery into your post. Copy the code below into your
         "/banners/placeholder.png"
     >}}
 
-
-### Github Gists
-
-Enter the id of your gist and you're ready to go.
-
-    {{<  gist "85f59771b5ae1e2091a8" >}}
-
-Note, that this only works with public gists since authentification is not supported.
-
 ### JSFidde
 
 It works the same with JSFiddle examples you want to showcase. The parameter `id` consists of the username and id of the example.
@@ -146,20 +135,11 @@ As descibed in the [docs of JSFiddle](http://doc.jsfiddle.net/use/embedding.html
 
     {{< jsfiddle id="zalun/NmudS" tabs="html,result" >}}
 
-### Vimeo and Youtube
-
-The embedding of videos from Vimeo and Youtube is also supported.
-
-    {{< youtube "w7Ft2ymGmfc" >}}
-
-    {{< vimeo "137643804" >}}
-
-
 ## Nearly finished
 
 In order to see your site in action, run Hugo's built-in local server.
 
-    $ hugo server -w
+    $ hugo server
 
 Now enter [`localhost:1313`](//localhost:1313) in the address bar of your browser.
 
