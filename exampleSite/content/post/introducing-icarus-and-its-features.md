@@ -121,32 +121,22 @@ Last but not least I included some useful [shortcodes](http://gohugo.io/extras/s
 
 This way you can include a gallery into your post. Copy the code below into your content file and enter the relative paths to your images.
 
-    {{ < gallery
+    {{</* gallery
         "/banners/placeholder.png"
         "/banners/placeholder.png"
         "/banners/placeholder.png"
-    > }}
+    */>}}
 
-**Note: In order to prevent the execution of the shortcodes I added a space between `{{` and `<` at the beginning and the end of the shortcode. Revert this after copying.**
+<p></p>
 
 {{< gallery "/banners/placeholder.png" "/banners/placeholder.png" "/banners/placeholder.png" >}}
 
-
-### Github Gists
-
-Enter the id of your gist and you're ready to go.
-
-    {{ <  gist "85f59771b5ae1e2091a8" > }}
-
-Note, that this only works with public gists since authentification is not supported.
-
-{{<  gist "85f59771b5ae1e2091a8" >}}
 
 ### JSFidde
 
 It works the same with JSFiddle examples you want to showcase. The parameter `id` consists of the username and id of the example.
 
-    {{ < jsfiddle id="zalun/NmudS" > }}
+    {{</* jsfiddle id="zalun/NmudS" */>}}
 
 <p></p>
 
@@ -154,35 +144,18 @@ It works the same with JSFiddle examples you want to showcase. The parameter `id
 
 As descibed in the [docs of JSFiddle](http://doc.jsfiddle.net/use/embedding.html), you can define which tabs will be shown. Enter the tabs you want to see separated by a comma in the `tabs` parameter.
 
-    {{ < jsfiddle id="zalun/NmudS" tabs="html,result" > }}
+    {{</* jsfiddle id="zalun/NmudS" tabs="html,result" */>}}
 
 Do you see the difference?
 
 {{< jsfiddle id="zalun/NmudS" tabs="html,result" >}}
-
-### Vimeo and Youtube
-
-The embedding of videos from Vimeo and Youtube is also supported.
-
-    {{ < youtube "w7Ft2ymGmfc" > }}
-
-<p></p>
-
-{{< youtube "w7Ft2ymGmfc" >}}
-
-
-    {{ < vimeo "137643804" > }}
-
-<p></p>
-
-{{< vimeo "137643804" >}}
 
 
 ## Nearly finished
 
 In order to see your site in action, run Hugo's built-in local server.
 
-    $ hugo server -w
+    $ hugo server
 
 Now enter [`localhost:1313`](//localhost:1313) in the address bar of your browser.
 
