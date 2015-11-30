@@ -1,15 +1,19 @@
 <article class="archive-article archive-type-post">
     <div class="archive-article-inner">
-        {{ if isset .Params "banner" }}
         <div class="archive-article-thumbnail">
+            {{ if isset .Params "banner" }}
             <a href="{{ .Permalink }}" class="thumbnail">
                 <span style="background-image:url({{ .Site.BaseURL }}{{ .Params.banner }})" alt="{{ .Title }}" class="thumbnail-image"></span>
             </a>
+            {{ else }}
+            <a href="{{ .Permalink }}" class="thumbnail">
+                <span class="thumbnail-image thumbnail-none"></span>
+            </a>
+            {{ end }}
         </div>
-        {{ end }}
         <header class="archive-article-header">
             <h1 itemprop="name">
-                <a class="archive-article-title" href="{{ .Permalink }}">{{ .Title }}</a>
+            <a class="archive-article-title" href="{{ .Permalink }}">{{ .Title }}</a>
             </h1>
             <div class="archive-article-date">
                 <i class="fa fa-calendar"></i>
