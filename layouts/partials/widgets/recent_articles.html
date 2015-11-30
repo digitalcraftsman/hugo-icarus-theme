@@ -12,7 +12,7 @@
                     {{ if isset .Params "banner" }}
                         <span style="background-image:url({{ $.Site.BaseURL }}{{ .Params.banner }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
                     {{else}}
-                        <span style="background-image:url({{ .Site.BaseURL }}css/images/thumb-default-small.png)" alt="{{ $.Title }}" class="thumbnail-image"></span>
+                        <span class="thumbnail-image thumbnail-none"></span>
                     {{ end }}
                     </a>
                 </div>
