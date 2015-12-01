@@ -1,4 +1,4 @@
-baseurl = "www.yourdomain.com"
+baseurl = "http://www.yourdomain.com/"
 languageCode = "en-us"
 title = "Icarus"
 # Enable comments by entering your Disqus shortname
