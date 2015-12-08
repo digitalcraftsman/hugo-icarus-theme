@@ -11,7 +11,7 @@
             {{ partial "article_header" . }}
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    {{ .Summary }}
+                    {{ printf "%s" .Summary | markdownify }}
                     <br>
                 </p>
                 <p class="article-more-link">
