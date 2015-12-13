@@ -15,11 +15,26 @@
             {{ .ReadingTime }}
             {{ with .Site.Data.l10n.articles.readingtime }}{{.}}{{end}}
         </div>
+        {{ $categoryLen := len .Params.categories }}
+        {{ if gt $categoryLen 0 }}
         <div class="article-category">
-            {{ range .Params.categories }}
             <i class="fa fa-folder"></i>
+            {{ range $k, $v := .Params.categories }}
             <a class="article-category-link" href="{{ $.Site.BaseURL }}categories/{{ . | urlize | lower }}">{{ . }}</a>
+            {{ if lt $k (sub $categoryLen 1) }}&middot;{{ end }}
             {{ end }}
         </div>
+        {{ end }}
+
+        {{ $tagsLen := len .Params.tags }}
+        {{ if gt $tagsLen 0 }}
+        <div class="article-category">
+            <i class="fa fa-tags"></i>
+            {{ range $k, $v := .Params.tags }}
+            <a class="article-category-link" href="{{ $.Site.BaseURL }}tags/{{ . | urlize | lower }}">{{ . }}</a>
+            {{ if lt $k (sub $tagsLen 1) }}&middot;{{ end }}
+            {{ end }}
+        </div>
+        {{ end }}
     </div>
 </header>
