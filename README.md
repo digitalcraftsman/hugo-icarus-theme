@@ -10,7 +10,7 @@ I assume you've Git installed. Inside the folder of your Hugo site run
 
     $ mkdir themes
     $ cd themes
-    $ git clone git@github.com:digitalcraftsman/hugo-icarus-theme.git
+    $ git clone https://github.com/digitalcraftsman/hugo-icarus-theme.git
 
 You should see a folder called `hugo-icarus-theme` inside the `themes` directory, that we created a few moments ago. For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
