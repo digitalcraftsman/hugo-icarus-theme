@@ -1,6 +1,7 @@
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
+      {{ partial "trafficstats" .}}
       &copy; {{.Now.Format "2006"}}<br>
       {{ with .Site.Params.copyright }}{{ . | markdownify}}{{ end }}
     </div>
