@@ -1,5 +1,5 @@
 +++
-title = "Introducing Icarus and it's features"
+title = "Introducing Icarus and its features"
 date = "2015-10-10T16:56:43+02:00"
 tags = ["theme", "hugo", "static sites"]
 categories = ["theme"]
@@ -19,12 +19,12 @@ I assume you've Git installed. Inside the folder of your Hugo site run
     $ cd themes
     $ git clone git@github.com:digitalcraftsman/hugo-icarus-theme.git
 
-You should see a folder called `hugo-icarus-theme` inside the `themes` directory, that we created a few moments ago. For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
+You should see a folder called `hugo-icarus-theme` inside the `themes` directory that we created a few moments ago. For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
 
 ## Setup
 
-In the next step navigate to the `exampleSite` folder at `themes/hugo-icarus-theme/exampleSite/`. It's structure shoud look similar to this:
+In the next step navigate to the `exampleSite` folder at `themes/hugo-icarus-theme/exampleSite/`. Its structure should look similar to this:
 
     exampleSite
     ├── config.toml
@@ -72,10 +72,10 @@ Furthermore, we can add entries that don't link to posts. Back in the `config.to
         label  = "Home"
         link   = "/"
 
-Define a label and enter the URL to resource you want to link. With `before` you can decide wether the link should appear before **or** after all linked posts in the menu. `Home` appears before the linked post, `Tags` and `Categories` after them (as in the menu above).
+Define a label and enter the URL to resource you want to link. With `before` you can decide whether the link should appear before **or** after all linked posts in the menu. `Home` appears before the linked post, `Tags` and `Categories` after them (as in the menu above).
 
 
-### Tell me who you're
+### Tell me who you are
 
 Maybe you noticed the profile section on the left. Add your social network accounts to the profile section on the left by entering your username under `social`. The links to your account will be create automatically.
 
@@ -93,7 +93,7 @@ On the right, you can see some useful widgets that you can activate as you like.
 
 ## Localization (l10n)
 
-You don't blog in english and you want to translate the theme into your native locale? No problem. Take a look in the `data` folder and you'll find a file `l10n.toml` that we've copied at the beginning. It contains all strings related to the theme. Just replace the original strings with your own.
+You don't blog in English and you want to translate the theme into your native locale? No problem. Take a look in the `data` folder and you'll find a file `l10n.toml` that we've copied at the beginning. It contains all strings related to the theme. Just replace the original strings with your own.
 
 
 ## Linking thumbnails
@@ -107,7 +107,7 @@ This way you can store them either next to the content file or in the `static` f
 
 ## Mathematical equations
 
-In case you need to display equations you can insert your Latex or MathML code and it works out of the box thanks to [MathJax](https://www.mathjax.org).
+In case you need to display equations you can insert your LaTeX or MathML code and it works out of the box thanks to [MathJax](https://www.mathjax.org).
 
     \[ z = r \cdot (\sin{\phi} + \cos{\phi} \cdot i) \]
 
@@ -116,7 +116,7 @@ In case you need to display equations you can insert your Latex or MathML code a
 
 ## Shortcodes
 
-Last but not least I included some useful [shortcodes](http://gohugo.io/extras/shortcodes/) to make your like easier.
+Last but not least I included some useful [shortcodes](http://gohugo.io/extras/shortcodes/) to make your life easier.
 
 ### Gallery
 
@@ -133,7 +133,7 @@ This way you can include a gallery into your post. Copy the code below into your
 {{< gallery "/banners/placeholder.png" "/banners/placeholder.png" "/banners/placeholder.png" >}}
 
 
-### JSFidde
+### JSFiddle
 
 It works the same with JSFiddle examples you want to showcase. The parameter `id` consists of the username and id of the example.
 
@@ -158,12 +158,12 @@ In order to see your site in action, run Hugo's built-in local server.
 
     $ hugo server
 
-Now enter [`localhost:1313`](//localhost:1313) in the address bar of your browser.
+Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
 
 
 ## Contributing
 
-Did you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](//github.com/digitalcraftsman/hugo-icarus-theme/issues) to let me know. Or make directly a [pull request](//github.com/digitalcraftsman/hugo-icarus-theme/pulls).
+Have you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](//github.com/digitalcraftsman/hugo-icarus-theme/issues) to let me know. Or make directly a [pull request](//github.com/digitalcraftsman/hugo-icarus-theme/pulls).
 
 
 ## License
