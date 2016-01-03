@@ -1,5 +1,11 @@
 # Changelog
 
+### 2016/01/03 - Allow specifying an avatar
+
+This change adds the new variable `avatar` under `[params]` in the configuration. You need to set this path in order to show an avatar image. The default one can still be found under `css/images/avatar.png`.
+
+[Show me the diff](https://github.com/larrywright/hugo-icarus-theme/commit/0850eabae7e7f79151bfcb462d4ad6795d7caeea)
+
 ### 2015/11/27 - Upgrade to Hugo v0.15
 
 Hugo v0.15 is required in order to run the theme with the changes listed below:
