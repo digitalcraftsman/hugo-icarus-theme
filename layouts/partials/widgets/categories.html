@@ -1,4 +1,5 @@
 {{ if .Site.Params.widgets.categories }}
+{{ if isset .Site.Taxonomies "categories" }}
 {{ if not (eq (len .Site.Taxonomies.categories) 0) }}
 <div class="widget-wrap">
     <h3 class="widget-title">{{with .Site.Data.l10n.widgets.categories.title}}{{.}}{{end}}</h3>
@@ -15,5 +16,6 @@
         </ul>
     </div>
 </div>
+{{ end }}
 {{ end }}
 {{ end }}

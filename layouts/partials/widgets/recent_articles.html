@@ -17,7 +17,7 @@
                     </a>
                 </div>
                 <div class="item-inner">
-                    {{ if ge (len .Params.categories ) 1 }}
+                    {{ if isset .Params "categories" }}
                     <p class="item-category">
                         <a class="article-category-link" href="{{ $.Site.BaseURL }}categories/{{ index .Params.categories 0 | urlize | lower }}">
                         {{ index .Params.categories 0 }}

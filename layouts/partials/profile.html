@@ -17,7 +17,11 @@
         <span>{{with .Site.Data.l10n.profile.posts}}{{.}}{{end}}</span>
       </div>
       <div class="article-info-block">
-        {{ len .Site.Taxonomies.tags }}
+        {{ if isset .Site.Taxonomies "tags" }}
+          {{ len .Site.Taxonomies.tags }}
+        {{ else }}
+          0
+        {{ end }}  
         <span>
             {{with .Site.Data.l10n.profile.tags}}{{.}}{{end}}
         </span>
