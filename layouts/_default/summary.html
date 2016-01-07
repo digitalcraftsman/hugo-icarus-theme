@@ -3,7 +3,7 @@
         <div class="archive-article-thumbnail">
             {{ if isset .Params "banner" }}
             <a href="{{ .Permalink }}" class="thumbnail">
-                <span style="background-image:url({{ .Site.BaseURL }}{{ .Params.banner }})" alt="{{ .Title }}" class="thumbnail-image"></span>
+                <span style="background-image:url({{ .Params.banner }})" alt="{{ .Title }}" class="thumbnail-image"></span>
             </a>
             {{ else }}
             <a href="{{ .Permalink }}" class="thumbnail">
