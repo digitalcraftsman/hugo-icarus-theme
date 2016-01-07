@@ -10,7 +10,7 @@
                 <div class="item-thumbnail">
                     <a href="{{ $.Permalink }}" class="thumbnail">
                     {{ if isset .Params "banner" }}
-                        <span style="background-image:url({{ $.Site.BaseURL }}{{ .Params.banner }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
+                        <span style="background-image:url({{ .Params.banner }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
                     {{else}}
                         <span class="thumbnail-image thumbnail-none"></span>
                     {{ end }}
