@@ -8,7 +8,7 @@
             {{ range first 5 (where .Site.Pages "Type" "post") }}
             <li>
                 <div class="item-thumbnail">
-                    <a href="{{ $.Permalink }}" class="thumbnail">
+                    <a href="{{ .Permalink }}" class="thumbnail">
                     {{ if isset .Params "banner" }}
                         <span style="background-image:url({{ .Params.banner }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
                     {{else}}
