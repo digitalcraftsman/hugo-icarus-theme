@@ -5,7 +5,12 @@
         <div class="article-inner">
             {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
             <a href="{{ .Permalink }}" itemprop="url">
-                <img src="{{ .Params.banner }}" class="article-banner"> {{ end }}
+                {{if or (in (substr .Params.banner 0 7) "http://") (in (substr .Params.banner 0 8) "https://")}}
+                <img src="{{ .Params.banner }}" class="article-banner">
+                {{ else }}
+                <img src="{{ .Site.BaseURL }}{{ .Params.banner }}" class="article-banner">
+                {{end}}
+            {{ end }}
             </a>
 
             {{ partial "article_header" . }}

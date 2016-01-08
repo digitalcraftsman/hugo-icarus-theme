@@ -2,7 +2,11 @@
     <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
-            <img src="{{ .Params.banner }}" class="article-banner">
+                {{if or (in (substr .Params.banner 0 7) "http://") (in (substr .Params.banner 0 8) "https://")}}
+                <img src="{{ .Params.banner }}" class="article-banner">
+                {{ else }}
+                <img src="{{ .Site.BaseURL }}{{ .Params.banner }}" class="article-banner">
+                {{end}}
             {{ end }}
 
             {{ partial "article_header" . }}
