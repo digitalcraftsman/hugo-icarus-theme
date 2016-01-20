@@ -1,7 +1,7 @@
 <header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
-      <a href="{{ .Site.BaseURL }}" id="logo"><i class="logo" style="background-image: url('{{ .Site.BaseURL }}css/images/logo.png')"></i><span class="site-title">{{ .Site.Title }}</span></a>
+      <a href="{{ .Site.BaseURL }}" id="logo"><i class="logo" style="background-image: url('{{ .Site.BaseURL }}images/logo.png')"></i><span class="site-title">{{ .Site.Title }}</span></a>
       <nav id="main-nav">
           {{ range .Site.Params.menu }}
           {{ if .before }}
@@ -21,7 +21,7 @@
       </nav>
         <nav id="sub-nav">
           <div class="profile" id="profile-nav">
-            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="{{ .Site.BaseURL }}css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="{{ .Site.BaseURL }}images/avatar.png"><i class="fa fa-caret-down"></i></a>
           </div>
         </nav>
         <div id="search-form-wrap">
