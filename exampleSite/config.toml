@@ -5,7 +5,7 @@ title = "Icarus"
 disqusShortname = "spf13"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
-# Define the number of posts per site
+# Define the number of posts per page
 paginate = 10
 footnotereturnlinkcontents = "↩"
 theme = "hugo-icarus-theme"
