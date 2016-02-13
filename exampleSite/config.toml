@@ -5,8 +5,9 @@ title = "Icarus"
 disqusShortname = "spf13"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
-# Define the number of posts per site
+# Define the number of posts per page
 paginate = 10
+footnotereturnlinkcontents = "↩"
 theme = "hugo-icarus-theme"
 
 
@@ -15,18 +16,19 @@ theme = "hugo-icarus-theme"
 
 
 [params]
-    # Tell me who you're
+    # Tell me who you are
     author = "John Doe"
     bio = "Blogger - Programmer - Gopher"
     location = "Earth"
     site_description = ""
     copyright  = "Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
+    avatar = "css/images/avatar.png"
 
-    # Format dates with Go's time formating
+    # Format dates with Go's time formatting
     date_format = "2006-01-02"
 
 # Create custom menu entries by defining a label and a link for
-# them. Since you can also link posts you've the option the
+# them. Since you can also link posts, you've the option the
 # place the links before or after them.
 #
 # E.g.: "Home" appears before all linked posts in the menu

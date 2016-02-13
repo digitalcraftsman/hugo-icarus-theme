@@ -8,16 +8,20 @@
             {{ range first 3 (where .Site.Pages "Type" "post") }}
             <li>
                 <div class="item-thumbnail">
-                    <a href="{{ $.Permalink }}" class="thumbnail">
+                    <a href="{{ .Permalink }}" class="thumbnail">
                     {{ if isset .Params "banner" }}
+                        {{if or (in (substr .Params.banner 0 7) "http://") (in (substr .Params.banner 0 8) "https://")}}
+                        <span style="background-image:url({{ .Params.banner }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
+                        {{ else }}
                         <span style="background-image:url({{ $.Site.BaseURL }}{{ .Params.banner }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
+                        {{end}}
                     {{else}}
                         <span class="thumbnail-image thumbnail-none"></span>
                     {{ end }}
                     </a>
                 </div>
                 <div class="item-inner">
-                    {{ if ge (len .Params.categories ) 1 }}
+                    {{ if isset .Params "categories" }}
                     <p class="item-category">
                         <a class="article-category-link" href="{{ $.Site.BaseURL }}categories/{{ index .Params.categories 0 | urlize | lower }}">
                         {{ index .Params.categories 0 }}
