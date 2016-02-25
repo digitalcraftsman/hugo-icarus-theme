@@ -107,7 +107,9 @@ This way you can store them either next to the content file or in the `static` f
 
 ## Mathematical equations
 
-In case you need to display equations you can insert your LaTeX or MathML code and it works out of the box thanks to [MathJax](https://www.mathjax.org).
+Mathematical equations in form of LaTeX or MathML code can be rendered with the support of [MathJax](https://www.mathjax.org). MathML works out of the box. If you're using LaTeX you need to wrap your equation with `$$`.
+
+You can also print formulas inline. In this case wrap the formula only once with `$`.
 
 
 ## Shortcodes
