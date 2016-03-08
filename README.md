@@ -45,9 +45,17 @@ Now, let us take a look into the `config.toml`. Feel free to play around with th
 
 ### Comments
 
-The opional comment system is powered by Disqus. Enter your shortname to enable the comment section under your posts.
+The optional comment system is powered by Disqus. Enter your shortname to enable the comment section under your posts.
 
     disqusShortname = ""
+
+Tip: you can disable the comment section for a single page in its frontmatter:
+
+```toml
++++
+disable_comments = true
++++
+```
 
 
 ### Menu
@@ -66,6 +74,18 @@ Furthermore, we can add entries that don't link to posts. Back in the `config.to
         link   = "/"
 
 Define a label and enter the URL to resource you want to link. With `before` you can decide whether the link should appear before **or** after all linked posts in the menu. Therefore, `Home` appears before the linked post.
+
+
+### Sidebars
+
+In order to use the full width of the website you can disable the profile on the left and / or the widgets on the right for a single page in the frontmatter:
+
+```toml
++++
+disable_profile = true
+disable_widgets = true
++++
+```
 
 
 ### Tell me who you are
