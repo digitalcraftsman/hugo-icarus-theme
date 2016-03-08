@@ -4,9 +4,15 @@
 	{{ partial "header" . }}
    	
    	<div class="outer">
+   		{{ if .IsPage | and (not .Params.disable_profile) }}
 	    {{ partial "profile" . }}
+	    {{ end }}
+
 	    {{ partial "single_article" . }}
+
+	    {{ if .IsPage | and (not .Params.disable_widgets) }}
 	    {{ partial "sidebar" . }}
+	    {{ end }}
 	</div>
 </div>
 

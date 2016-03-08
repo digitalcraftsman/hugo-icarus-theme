@@ -83,6 +83,18 @@ Furthermore, we can add entries that don't link to posts. Back in the `config.to
 Define a label and enter the URL to resource you want to link. With `before` you can decide whether the link should appear before **or** after all linked posts in the menu. `Home` appears before the linked post, `Tags` and `Categories` after them (as in the menu above).
 
 
+### Sidebars
+
+In order to use the full width of the website you can disable the profile on the left and / or the widgets on the right for a single page in the frontmatter:
+
+```toml
++++
+disable_profile = true
+disable_widgets = true
++++
+```
+
+
 ### Tell me who you are
 
 Maybe you noticed the profile section on the left. Add your social network accounts to the profile section on the left by entering your username under `social`. The links to your account will be create automatically.

@@ -28,6 +28,14 @@
     {{ template "_internal/schema.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
     {{ partial "head_custom" . }}
+
+    {{ if .Params.disable_profile | and .Params.disable_widgets }}
+    <style>
+        .full-width {
+            width: 100% !important;
+        }
+    </style>
+    {{ end }}
 </head>
 <body>
 <div class="container">
