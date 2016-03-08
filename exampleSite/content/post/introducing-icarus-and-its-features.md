@@ -52,9 +52,17 @@ Now, let us take a look into the `config.toml`. Feel free to play around with th
 
 ### Comments
 
-The opional comment system is powered by Disqus. Enter your shortname to enable the comment section under your posts.
+The optional comment system is powered by Disqus. Enter your shortname to enable the comment section under your posts.
 
     disqusShortname = ""
+
+Tip: you can disable the comment section for a single page in its frontmatter:
+
+```toml
++++
+disable_comments = true
++++
+```
 
 
 ### Menu
