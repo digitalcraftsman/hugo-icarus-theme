@@ -176,6 +176,9 @@ Have you found a bug or got an idea for a new feature? Feel free to use the [iss
 This theme is released under the MIT license. For more information read the [license](https://github.com/digitalcraftsman/hugo-icarus-theme/blob/master/LICENSE.md).
 
 
-## Acknowledgement
+## Acknowledgements
 
-Thanks to [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project.
+Thanks to 
+
+- [Ruipeng Zhang](https://github.com/ppoffice) for creating this theme
+- [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project
