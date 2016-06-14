@@ -3,11 +3,7 @@
         <div class="archive-article-thumbnail">
             {{ if isset .Params "banner" }}
             <a href="{{ .Permalink }}" class="thumbnail">
-                {{if or (in (substr .Params.banner 0 7) "http://") (in (substr .Params.banner 0 8) "https://")}}
-                <span style="background-image:url({{ .Params.banner }})" alt="{{ .Title }}" class="thumbnail-image"></span>
-                {{ else }}
-                <span style="background-image:url({{ .Site.BaseURL }}{{ .Params.banner }})" alt="{{ .Title }}" class="thumbnail-image"></span>
-                {{end}}
+                <span style="background-image:url({{ .Params.banner | absURL }})" alt="{{ .Title }}" class="thumbnail-image"></span>
             </a>
             {{ else }}
             <a href="{{ .Permalink }}" class="thumbnail">
