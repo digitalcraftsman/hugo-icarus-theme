@@ -58,6 +58,7 @@ theme = "hugo-icarus-theme"
 # by entering your username. The links to your account will be
 # create automatically.
     github          = "digitalcraftsman"
+    gitlab          = ""
     bitbucket       = ""
     jsfiddle        = ""
     codepen         = ""
