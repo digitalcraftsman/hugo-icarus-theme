@@ -1,7 +1,12 @@
 <header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
-      <a href="{{ .Site.BaseURL }}" id="logo"><i class="logo" style="background-image: url('{{ .Site.BaseURL }}css/images/logo.png')"></i><span class="site-title">{{ .Site.Title }}</span></a>
+      <a href="{{ .Site.BaseURL }}" id="logo">
+          {{ if .Site.Params.logo }}
+          <i class="logo" style="background-image: url('{{ .Site.Params.logo | absURL }}')"></i>
+          {{end}}
+          <span class="site-title">{{ .Site.Title }}</span>
+      </a>
       <nav id="main-nav">
           {{ range .Site.Params.menu }}
           {{ if .before }}

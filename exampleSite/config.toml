@@ -23,6 +23,7 @@ theme = "hugo-icarus-theme"
     site_description = ""
     copyright  = "Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
     avatar = "css/images/avatar.png"
+    logo = "css/images/logo.png"
 
     # Format dates with Go's time formatting
     date_format = "2006-01-02"
