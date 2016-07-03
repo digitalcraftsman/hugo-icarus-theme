@@ -15,6 +15,9 @@
       <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
       <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
+    {{ if .Permalink }}
+      <link rel="canonical" href="{{ .Permalink }}"/>
+    {{ end }}
     <link rel="icon" href="{{ .Site.BaseURL }}favicon.ico">
     <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}apple-touch-icon.png" />
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
