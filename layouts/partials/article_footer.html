@@ -1,5 +1,6 @@
 <footer class="article-footer">
     <a data-url="{{ .Permalink }}" data-id="{{ .UniqueID }}" class="article-share-link">
+        <i class="fa fa-share"></i>
         {{with .Site.Data.l10n.articles.share}}{{.}}{{end}}
     </a>
     {{ if not (eq .Site.DisqusShortname "") }}
