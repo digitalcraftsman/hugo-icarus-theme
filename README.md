@@ -156,6 +156,9 @@ It works the same with JSFiddle examples you want to showcase. The parameter `id
 As descibed in the [docs of JSFiddle](http://doc.jsfiddle.net/use/embedding.html), you can define which tabs will be shown. Enter the tabs you want to see separated by a comma in the `tabs` parameter.
 
     {{< jsfiddle id="zalun/NmudS" tabs="html,result" >}}
+	
+## Custom CSS
+You can include a custom CSS file. It should be placed in `static/css` and be called `custom.css`.
 
 ## Nearly finished
 
