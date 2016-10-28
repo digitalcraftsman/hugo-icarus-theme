@@ -1,5 +1,11 @@
 # Changelog
 
+### 2016/10/28 - Option to link custom assets
+
+You're now able to link local or external assets by adding their url to
+the `custom_js` and `custom_css` variables in the config file.
+
+[Show me the diff](https://github.com/digitalcraftsman/hugo-icarus-theme/commit/cd1a8c02e0cf97c443cfdbf44091e66863305eba)
 
 ### 2016/03/08 - Options to disable features for single pages
 
