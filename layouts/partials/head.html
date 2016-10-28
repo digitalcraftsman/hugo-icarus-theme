@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/monokai.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}fancybox/jquery.fancybox.css">
+    {{ range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+    {{ end }}
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     {{ template "_internal/opengraph.html" . }}
