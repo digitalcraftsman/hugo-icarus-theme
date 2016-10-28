@@ -8,7 +8,6 @@ Icarus is a responsive and customizable theme for bloggers. It's a port of the s
 
 I assume you've Git installed. Inside the folder of your Hugo site run
 
-    $ mkdir themes
     $ cd themes
     $ git clone https://github.com/digitalcraftsman/hugo-icarus-theme.git
 
