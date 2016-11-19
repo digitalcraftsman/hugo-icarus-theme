@@ -16,14 +16,15 @@
             {{ with .Site.Data.l10n.articles.readingtime }}{{.}}{{end}}
         </div>
 
-        
+
         {{ if isset .Params "categories" }}
             {{ $categoriesLen := len .Params.categories }}
             {{ if gt $categoriesLen 0 }}
             <div class="article-category">
                 <i class="fa fa-folder"></i>
                 {{ range $k, $v := .Params.categories }}
-                <a class="article-category-link" href="{{ $.Site.BaseURL }}categories/{{ . | urlize | lower }}">{{ . }}</a>
+                {{ $url := printf "%s/%s" "categories" (. | urlize | lower) }}
+                <a class="article-category-link" href="{{ $url }}">{{ . }}</a>
                 {{ if lt $k (sub $categoriesLen 1) }}&middot;{{ end }}
                 {{ end }}
             </div>
@@ -36,7 +37,8 @@
             <div class="article-category">
                 <i class="fa fa-tags"></i>
                 {{ range $k, $v := .Params.tags }}
-                <a class="article-category-link" href="{{ $.Site.BaseURL }}tags/{{ . | urlize | lower }}">{{ . }}</a>
+                {{ $url := printf "%s/%s" "tags" (. | urlize | lower) }}
+                <a class="article-category-link" href="{{ $url }}">{{ . }}</a>
                 {{ if lt $k (sub $tagsLen 1) }}&middot;{{ end }}
                 {{ end }}
             </div>

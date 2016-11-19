@@ -20,7 +20,8 @@
                     {{ if isset .Params "categories" }}
                     {{ if gt (len .Params.categories) 0 }}
                     <p class="item-category">
-                        <a class="article-category-link" href="{{ $.Site.BaseURL }}categories/{{ index .Params.categories 0 | urlize | lower }}">
+                        {{ $url := printf "%s/%s" "categories" (index .Params.categories 0 | urlize | lower)}}
+                        <a class="article-category-link" href="{{ $url | absURL }}">
                         {{ index .Params.categories 0 }}
                         </a>
                     </p>
