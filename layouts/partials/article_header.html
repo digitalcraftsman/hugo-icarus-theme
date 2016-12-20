@@ -23,7 +23,7 @@
             <div class="article-category">
                 <i class="fa fa-folder"></i>
                 {{ range $k, $v := .Params.categories }}
-                {{ $url := printf "%s/%s" "categories" (. | urlize | lower) }}
+                {{ $url := printf "/%s/%s" "categories" (. | urlize | lower) }}
                 <a class="article-category-link" href="{{ $url }}">{{ . }}</a>
                 {{ if lt $k (sub $categoriesLen 1) }}&middot;{{ end }}
                 {{ end }}
@@ -37,7 +37,7 @@
             <div class="article-category">
                 <i class="fa fa-tags"></i>
                 {{ range $k, $v := .Params.tags }}
-                {{ $url := printf "%s/%s" "tags" (. | urlize | lower) }}
+                {{ $url := printf "/%s/%s" "tags" (. | urlize | lower) }}
                 <a class="article-category-link" href="{{ $url }}">{{ . }}</a>
                 {{ if lt $k (sub $tagsLen 1) }}&middot;{{ end }}
                 {{ end }}
