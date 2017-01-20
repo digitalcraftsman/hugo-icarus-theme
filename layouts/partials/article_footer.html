@@ -4,7 +4,7 @@
         {{with .Site.Data.l10n.articles.share}}{{.}}{{end}}
     </a>
     {{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
-    <a href="{{ .Permalink }}/#disqus_thread" class="article-comment-link">
+    <a href="{{ .Permalink }}#disqus_thread" class="article-comment-link">
         {{with .Site.Data.l10n.articles.comments}}{{.}}{{end}}
     </a>
     {{end}}
