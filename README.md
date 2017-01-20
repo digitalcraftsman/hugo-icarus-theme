@@ -109,6 +109,9 @@ You can deactivate them under `params.widgets`:
         tags = true
         tag_cloud = true
 
+### Date line
+
+The date line includes: post date, # of words, approximate reading, time tags and categories. However, if you want certain pages to omit the date line, simply put `nodateline = true` in the front matter for that page.
 
 ## Localization (l10n)
 
@@ -134,7 +137,6 @@ You can also print formulas inline. In this case wrap the formula only once with
 ## Shortcodes
 
 Last but not least I included some useful [shortcodes](http://gohugo.io/extras/shortcodes/) to make your life easier.
-
 
 ### Gallery
 
