@@ -133,7 +133,7 @@ Mathematical equations in form of LaTeX or MathML code can be rendered with the 
 
 You can also print formulas inline. In this case wrap the formula only once with `$`.
 
-If you don't need equations, you can disable MathJax but putting `mathjax = false` in your config.toml. This will prevent clients from unnecessarily downloading the MathJax library.
+If you don't need equations, you can disable MathJax but putting `disable_mathjax = true` in your config.toml. This will prevent clients from unnecessarily downloading the MathJax library.
 
 ## Shortcodes
 
