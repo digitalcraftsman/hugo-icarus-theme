@@ -5,6 +5,8 @@
     </h1>
     </a>
     <div class="article-meta">
+
+        {{ if not .Params.nodateline }}
         <div class="article-date">
             <i class="fa fa-calendar"></i>
             <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
@@ -15,8 +17,7 @@
             {{ .ReadingTime }}
             {{ with .Site.Data.l10n.articles.readingtime }}{{.}}{{end}}
         </div>
-
-
+        {{ end }}
         {{ if isset .Params "categories" }}
             {{ $categoriesLen := len .Params.categories }}
             {{ if gt $categoriesLen 0 }}
