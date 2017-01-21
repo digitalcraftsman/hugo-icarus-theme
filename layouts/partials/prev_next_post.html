@@ -1,4 +1,4 @@
-{{ if or .PrevInSection .NextInSection }}
+{{ if and (or .PrevInSection .NextInSection) (not .Params.noprevnext) }}
 <nav id="article-nav">
     {{ if .PrevInSection }}
     <a href="{{ .PrevInSection.Permalink }}" id="article-nav-older" class="article-nav-link-wrap">
