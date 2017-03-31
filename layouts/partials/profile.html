@@ -13,7 +13,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        {{ len (where .Site.Pages "Type" "post") }}
+        {{ len (where .Site.RegularPages "Type" "post") }}
         <span>{{with .Site.Data.l10n.profile.posts}}{{.}}{{end}}</span>
       </div>
       <div class="article-info-block">
