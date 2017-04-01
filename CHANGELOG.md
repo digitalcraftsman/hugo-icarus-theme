@@ -1,5 +1,9 @@
 # Changelog
 
+### 1st April 2017
+
+With Hugo v0.20 the `.Now` is deprecated and will be replaced by the `now` template function. v0.19 does support both and as part of the transition phase. Hence the least required version of Hugo is v0.19.
+
 ### 28th October 2016 - Option to link custom assets
 
 You're now able to link local or external assets by adding their url to
