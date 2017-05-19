@@ -1,11 +1,11 @@
 {{ partial "head" . }}
 
 <div id="container">
-	{{ partial "header" . }}
+	{{ partialCached "header" . }}
    	
    	<div class="outer">
    	{{ if not .Params.disable_profile }}
-    	{{ partial "profile" . }}
+    	{{ partialCached "profile" . }}
     {{ end }}
 
    	{{ block "main" . }}{{ end }}
@@ -16,6 +16,6 @@
 	</div>
 </div>
 
-{{ partial "footer" . }}
+{{ partialCached "footer" . }}
 </body>
 </html>
