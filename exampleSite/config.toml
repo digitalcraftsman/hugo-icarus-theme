@@ -25,6 +25,9 @@ themesDir = "../.."
     site_description = ""
     copyright  = "Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
     avatar = "css/images/avatar.png"
+    # Enter your email address to display your Gravatar icon in the profile. If not set the theme
+    # will fallback to the avatar.
+    gravatar = "you@example.com"
     logo = "css/images/logo.png"
     disable_mathjax = false # set to true to disable MathJax
 
