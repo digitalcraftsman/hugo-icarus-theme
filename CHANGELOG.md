@@ -1,5 +1,22 @@
 # Changelog
 
+
+## Release v1.1 - ???? th May 2017
+
+*In the future new additions and changes will be assigned to version numbers rather than dates.* This allows you to track changes in a better fashion. The state of this theme before this release has been assigned to v1.0.
+
+### General information
+
+The `exampleSite` folder has become a standalone demo by modified the `themesDir` property in the `config.toml`. Make sure to comment out `themesDir` in the config file if you use the theme in production. [Read more](/README.md#setup)
+
+### Fixes:
+
+### Improvements
+
+### Deprecations
+
+
+
 ### 1st April 2017
 
 With Hugo v0.20 the `.Now` is deprecated and will be replaced by the `now` template function. v0.19 does support both and as part of the transition phase. Hence the least required version of Hugo is v0.19.
