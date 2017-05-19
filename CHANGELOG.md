@@ -9,12 +9,18 @@
 
 The `exampleSite` folder has become a standalone demo by modified the `themesDir` property in the `config.toml`. Make sure to comment out `themesDir` in the config file if you use the theme in production. [Read more](/README.md#setup)
 
-### Fixes:
+### Fixes
+
+- Switch CDN for Mathjax due to retirement. See #86 (thanks @Heliosmaster)
 
 ### Improvements
 
+- [Block templates](https://gohugo.io/templates/blocks/) are now used to reduce redundancy. See 7b99326
+- Cache partials where possible. See d38e4be
+
 ### Deprecations
 
+- The JSFiddle shortcode has been removed. See 5203108
 
 
 ### 1st April 2017
