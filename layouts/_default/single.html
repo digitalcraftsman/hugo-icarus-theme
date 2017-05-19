@@ -1,21 +1,3 @@
-{{ partial "head" . }}
-
-<div id="container">
-	{{ partial "header" . }}
-   	
-   	<div class="outer">
-   		{{ if .IsPage | and (not .Params.disable_profile) }}
-	    {{ partial "profile" . }}
-	    {{ end }}
-
-	    {{ partial "single_article" . }}
-
-	    {{ if .IsPage | and (not .Params.disable_widgets) }}
-	    {{ partial "sidebar" . }}
-	    {{ end }}
-	</div>
-</div>
-
-{{ partial "footer" . }}
-</body>
-</html>
+{{ define "main" }}
+    {{ partial "single_article" . }}
+{{ end }}

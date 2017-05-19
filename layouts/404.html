@@ -1,31 +1,20 @@
-{{ partial "head" . }}
-
-<div id="container">
-    {{ partial "header" . }}
-   <div class="outer">
-    {{ partial "profile" . }}
-    <section id="main">
-        <article class="article article-type-post" itemscope="" itemprop="blogPost">
-            <div class="article-inner">
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        <center>
-                        <h1>
-                            {{with .Site.Data.l10n.page_not_found.title}}{{.}}{{end}}
-                        </h1>
-                        <h3>
-                            {{with .Site.Data.l10n.page_not_found.subtitle}}{{.}}{{end}}
-                        </h3>
-                        </center>
-                    </p>
-                </div>
+{{ define "main" }}
+<section id="main">
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    <center>
+                    <h1>
+                        {{with .Site.Data.l10n.page_not_found.title}}{{.}}{{end}}
+                    </h1>
+                    <h3>
+                        {{with .Site.Data.l10n.page_not_found.subtitle}}{{.}}{{end}}
+                    </h3>
+                    </center>
+                </p>
             </div>
-        </article>
-    </section>
-    {{ partial "sidebar" . }}
-</div>
-</div>
-
-{{ partial "footer" . }}
-</body>
-</html>
+        </div>
+    </article>
+</section>
+{{ end }}
