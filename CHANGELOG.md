@@ -12,15 +12,22 @@ The `exampleSite` folder has become a standalone demo by modified the `themesDir
 ### Fixes
 
 - Switch CDN for Mathjax due to retirement. See #86 (thanks @Heliosmaster)
+- Prevent appearance of link for /posts on homepage. See dc62f88 (thanks @igor-sokolov)
 
 ### Improvements
 
 - [Block templates](https://gohugo.io/templates/blocks/) are now used to reduce redundancy. See 7b99326
 - Cache partials where possible. See d38e4be
+- Add example for about page. See 183f569
+- The `.Site.Params.mainSections` options allows you to specify which types of pages should be shown on the homepage. See 0928ac7
+- Add `.Site.Params.gravatar` as a way use Gravatar for the profile picure. See b6b79b7
 
 ### Deprecations
 
 - The JSFiddle shortcode has been removed. See 5203108
+
+
+---
 
 
 ### 1st April 2017
