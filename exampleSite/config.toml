@@ -28,6 +28,9 @@ themesDir = "../.."
     logo = "css/images/logo.png"
     disable_mathjax = false # set to true to disable MathJax
 
+    # define which types of pages should be shown. By default the type with the most regular pages
+    mainSections = ["post"]
+
     # Format dates with Go's time formatting
     date_format = "2006-01-02"
 
