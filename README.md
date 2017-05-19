@@ -16,25 +16,11 @@ You should see a folder called `hugo-icarus-theme` inside the `themes` directory
 
 ## Setup
 
-In the next step navigate to the `exampleSite` folder at `themes/hugo-icarus-theme/exampleSite/`. Its structure should look similar to this:
+Next, navigate to the `exampleSite` folder at `themes/hugo-type-theme/exampleSite/`.  In order to get your site running, you need to copy `config.toml` and all the content of all relevant subfolders such as `data/l10n.toml` into the root folders.
 
-    exampleSite
-    ├── config.toml
-    ├── content
-    │   └── post
-    │       ├── creating-a-new-theme.md
-    │       ├── go-is-for-lovers.md
-    │       ├── hugo-is-for-lovers.md
-    │       ├── introducing-icarus-and-its-features.md
-    │       ├── linked-post.md
-    │       └── migrate-from-jekyll.md
-    ├── data
-    │   └── l10n.toml
-    └── static
-        └── banners
-            └── placeholder.png
+To turn the `exampleSite` folder in a standalone demo site the `themesDir` property has been set to `../..`. This way you can preview this theme by running `hugo server` inside `exampleSite` folder.
 
-In order to get your site running, you need to copy `config.toml` and `data/l10n.toml` into the root folders.
+**Due to the customized `themesDir` path Hugo will fail to find themes if you copied the `config.toml` into the root directory of a regular Hugo website.** Make sure you comment out the `themesDir` property if you use the theme in production.
 
 
 ## The config file

@@ -9,6 +9,8 @@ googleAnalytics = ""
 paginate = 10
 footnotereturnlinkcontents = "↩"
 theme = "hugo-icarus-theme"
+# Comment the themesDir option if you use this theme in production
+themesDir = "../.."
 
 
 [permalinks]
