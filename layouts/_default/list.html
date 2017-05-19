@@ -1,5 +1,9 @@
 {{ define "main" }}
-<section id="main">
+    {{ $context := . }}
+    
+    {{ with .Content }}
+        {{ partial "single_article.html" $context }}
+    {{ else }}
     <section class="archives-wrap">
         <div class="archive-category-wrap">
             <span class="archive-category">{{ .Title }}</span>
@@ -12,5 +16,5 @@
         </div>
     </section>
     {{ partial "pagination" . }}
-</section>
+    {{ end }}
 {{ end }}
