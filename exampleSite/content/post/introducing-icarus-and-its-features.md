@@ -136,13 +136,10 @@ $$ z = r \cdot (\sin{\phi} + \cos{\phi} \cdot i) $$
 You can also print formulas inline: $a^2 + b^2 = c^2$. In this case wrap the formula only once with `$`.
 
 
-## Shortcodes
 
-Last but not least I included some useful [shortcodes](http://gohugo.io/extras/shortcodes/) to make your life easier.
+### Gallery shortcode
 
-### Gallery
-
-This way you can include a gallery into your post. Copy the code below into your content file and enter the relative paths to your images.
+This way you can easily include a gallery into your page. Copy the code below into your content file and enter the relative paths to your images.
 
     {{</* gallery
         "/banners/placeholder.png"
@@ -153,25 +150,6 @@ This way you can include a gallery into your post. Copy the code below into your
 <p></p>
 
 {{< gallery "/banners/placeholder.png" "/banners/placeholder.png" "/banners/placeholder.png" >}}
-
-
-### JSFiddle
-
-It works the same with JSFiddle examples you want to showcase. The parameter `id` consists of the username and id of the example.
-
-    {{</* jsfiddle id="zalun/NmudS" */>}}
-
-<p></p>
-
-{{< jsfiddle id="zalun/NmudS" >}}
-
-As descibed in the [docs of JSFiddle](http://doc.jsfiddle.net/use/embedding.html), you can define which tabs will be shown. Enter the tabs you want to see separated by a comma in the `tabs` parameter.
-
-    {{</* jsfiddle id="zalun/NmudS" tabs="html,result" */>}}
-
-Do you see the difference?
-
-{{< jsfiddle id="zalun/NmudS" tabs="html,result" >}}
 
 
 ## Nearly finished

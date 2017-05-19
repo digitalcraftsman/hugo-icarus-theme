@@ -125,13 +125,10 @@ You can also print formulas inline. In this case wrap the formula only once with
 
 If you don't need equations, you can disable MathJax but putting `disable_mathjax = true` in your config.toml. This will prevent clients from unnecessarily downloading the MathJax library.
 
-## Shortcodes
 
-Last but not least I included some useful [shortcodes](http://gohugo.io/extras/shortcodes/) to make your life easier.
+### Gallery shortcode
 
-### Gallery
-
-This way you can include a gallery into your post. Copy the code below into your content file and enter the relative paths to your images.
+This shortcode you to easily include a gallery into your pages. Copy the code below into your content file and enter the relative paths to your images.
 
     {{< gallery
         "/banners/placeholder.png"
@@ -139,15 +136,6 @@ This way you can include a gallery into your post. Copy the code below into your
         "/banners/placeholder.png"
     >}}
 
-### JSFiddle
-
-It works the same with JSFiddle examples you want to showcase. The parameter `id` consists of the username and id of the example.
-
-    {{< jsfiddle id="zalun/NmudS" >}}
-
-As descibed in the [docs of JSFiddle](http://doc.jsfiddle.net/use/embedding.html), you can define which tabs will be shown. Enter the tabs you want to see separated by a comma in the `tabs` parameter.
-
-    {{< jsfiddle id="zalun/NmudS" tabs="html,result" >}}
 
 ## Nearly finished
 
