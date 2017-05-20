@@ -5,6 +5,8 @@
 
 *In the future new additions and changes will be assigned to version numbers rather than dates.* This allows you to track changes in a better fashion. The state of this theme before this release has been assigned to v1.0.
 
+**This change requires Hugo v0.20 or greater** due to the usage of new Hugo features.
+
 ### General information
 
 The `exampleSite` folder has become a standalone demo by modified the `themesDir` property in the `config.toml`. Make sure to comment out `themesDir` in the config file if you use the theme in production. [Read more](/README.md#setup)
