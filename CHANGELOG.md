@@ -1,7 +1,7 @@
 # Changelog
 
 
-## Release v1.1 - ???? th May 2017
+## Release v1.1 - 20th May 2017
 
 *In the future new additions and changes will be assigned to version numbers rather than dates.* This allows you to track changes in a better fashion. The state of this theme before this release has been assigned to v1.0.
 
@@ -13,20 +13,20 @@ The `exampleSite` folder has become a standalone demo by modified the `themesDir
 
 ### Fixes
 
-- Switch CDN for Mathjax due to retirement. See #86 (thanks @Heliosmaster)
-- Prevent appearance of link for /posts on homepage. See dc62f88 (thanks @igor-sokolov)
+- Switch CDN for Mathjax due to retirement. See [#86](https://github.com/digitalcraftsman/hugo-icarus-theme/pull/86) (thanks @Heliosmaster)
+- Prevent appearance of link for /posts on homepage. See [dc62f88](https://github.com/digitalcraftsman/hugo-icarus-theme/commit/dc62f88037645c57bc45b340d51725541e140528) (thanks @igor-sokolov)
 
 ### Improvements
 
-- [Block templates](https://gohugo.io/templates/blocks/) are now used to reduce redundancy. See 7b99326
-- Cache partials where possible. See d38e4be
-- Add example for about page. See 183f569
-- The `.Site.Params.mainSections` options allows you to specify which types of pages should be shown on the homepage. See 0928ac7
-- Add `.Site.Params.gravatar` as a way use Gravatar for the profile picure. See b6b79b7
+- [Block templates](https://gohugo.io/templates/blocks/) are now used to reduce redundancy. See [62d00ff](https://github.com/digitalcraftsman/hugo-icarus-theme/commit/62d00ff27ab2e4b363cd1a3aecd8da2fa0ef9bd74)
+- Cache partials where possible. See [d38e4be](https://github.com/digitalcraftsman/hugo-icarus-theme/commit/d38e4be45711c49174079fe57c2af959891e2cde)
+- Add example for about page. See [183f569](https://github.com/digitalcraftsman/hugo-icarus-theme/commit/183f569749f8051e609c36a57f417124f02a21f7)
+- The `.Site.Params.mainSections` options allows you to specify which types of pages should be shown on the homepage. See [0928ac7](https://github.com/digitalcraftsman/hugo-icarus-theme/commit/0928ac7868816f52541d07a2a66a4038c54de344)
+- Add `.Site.Params.gravatar` as a way use Gravatar for the profile picure. See [b6b79b7](https://github.com/digitalcraftsman/hugo-icarus-theme/commit/b6b79b766386db444df1703dd295a87acd5f6157)
 
 ### Deprecations
 
-- The JSFiddle shortcode has been removed. See 5203108
+- The JSFiddle shortcode has been removed. See [5203108](https://github.com/digitalcraftsman/hugo-icarus-theme/commit/52031082ef5cf8da6132d79bf6bfca2eb7a583e7)
 
 
 ---
