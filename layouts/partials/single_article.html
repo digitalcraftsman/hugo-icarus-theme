@@ -1,29 +1,23 @@
-{{ if .Params.disable_profile | and .Params.disable_widgets }}
-<section id="main" class="full-width">
-{{ else }}
-<section id="main">
-{{ end }}
-    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
-                <img src="{{ .Params.banner | absURL }}" class="article-banner">
-            {{ end }}
+<article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
+            <img src="{{ .Params.banner | absURL }}" class="article-banner">
+        {{ end }}
 
-            {{ partial "article_header" . }}
-            <div class="article-entry" itemprop="articleBody">
-                {{ .Content }}
-            </div>
-            {{ partial "article_footer" . }}
+        {{ partial "article_header" . }}
+        <div class="article-entry" itemprop="articleBody">
+            {{ .Content }}
         </div>
+        {{ partial "article_footer" . }}
+    </div>
 
-        {{ partial "prev_next_post" . }}
-    </article>
+    {{ partial "prev_next_post" . }}
+</article>
 
-    {{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
-    <section id="comments">
-        <div id="disqus_thread">
-            {{ template "_internal/disqus.html" . }}
-        </div>
-    </section>
-    {{ end }}
+{{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
+<section id="comments">
+    <div id="disqus_thread">
+        {{ template "_internal/disqus.html" . }}
+    </div>
 </section>
+{{ end }}

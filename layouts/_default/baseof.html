@@ -8,7 +8,9 @@
     	{{ partialCached "profile" . }}
     {{ end }}
 
-   	{{ block "main" . }}{{ end }}
+    <section id="main">
+    {{ block "main" . }}{{ end }}
+    </section>
 
    	{{ if not .Params.disable_widgets }}
     	{{ partial "sidebar" . }}
