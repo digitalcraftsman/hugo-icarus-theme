@@ -54,6 +54,11 @@ themesDir = "../.."
 
 [[params.menu]]
     before = false
+    label  = "Subdivision"
+    link   = "subdivision/"
+
+[[params.menu]]
+    before = false
     label  = "Tags"
     link   = "tags/"
 
