@@ -10,17 +10,29 @@
       <nav id="main-nav">
           {{ range .Site.Params.menu }}
           {{ if .before }}
+	  {{ if .icon }}
+	  <a class="main-nav-link" href="{{ .link | absURL }}"><i class="fa fa-{{ .icon }}"></i> {{ .label }}</a>
+	  {{ else }}
           <a class="main-nav-link" href="{{ .link | absURL }}">{{ .label }}</a>
+	  {{ end }}
           {{ end }}
           {{ end }}
 
           {{ range .Site.Menus.main }}
-          <a class="main-nav-link" href="{{ .URL }}">{{ .Name }}</a>
+	  {{ if .Pre }}
+          <a class="main-nav-link" href="{{ .URL }}"> {{.Pre}} {{ .Name }}</a>
+	  {{ else }}
+	  <a class="main-nav-link" href="{{ .URL }}">{{ .Name }}</a>
+	  {{ end }}
           {{ end }}
 
           {{ range .Site.Params.menu }}
           {{ if not .before }}
+	  {{ if .icon }}
+	  <a class="main-nav-link" href="{{ .link | absURL }}"><i class="fa fa-{{ .icon }}"></i> {{ .label }}</a>
+	  {{ else }}
           <a class="main-nav-link" href="{{ .link | absURL }}">{{ .label }}</a>
+	  {{ end }}
           {{ end }}
           {{ end }}
       </nav>
@@ -45,17 +57,35 @@
           <tr>
           {{ range .Site.Params.menu }}
           {{ if .before }}
-          <td><a class="main-nav-link" href="{{ .link | absURL }}">{{ .label }}</a></td>
+	  {{ if .icon }}
+	  <a class="main-nav-link" href="{{ .link | absURL }}" title ="{{ .label }}">
+	    <i class="fa fa-{{ .icon }}"></i>
+	  </a>
+	  {{ else }}
+          <td><a class="main-nav-link" href="{{ .link  | absURL }}">{{ .label }}</a></td>
+	  {{ end }}
+
           {{ end }}
           {{ end }}
 
           {{ range .Site.Menus.main }}
-          <td><a class="main-nav-link" href="{{ .URL }}">{{ .Name }}</a></td>
+
+	  {{ if .Pre }}
+          <a class="main-nav-link" href="{{ .URL }}"> {{.Pre}}</a>
+	  {{ else }}
+	  <a class="main-nav-link" href="{{ .URL }}">{{ .Name }}</a>
+	  {{ end }}
           {{ end }}
 
           {{ range .Site.Params.menu }}
           {{ if not .before }}
+	  {{ if .icon }}
+	  <a class="main-nav-link" href="{{ .link | absURL }}" title ="{{ .label }}">
+	    <i class="fa fa-{{ .icon }}"></i>
+	  </a>
+	  {{ else }}
           <td><a class="main-nav-link" href="{{ .link  | absURL }}">{{ .label }}</a></td>
+	  {{ end }}
           {{ end }}
           {{ end }}
           <td>
