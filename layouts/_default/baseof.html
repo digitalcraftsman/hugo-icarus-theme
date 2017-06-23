@@ -8,7 +8,12 @@
     	{{ partialCached "profile" . }}
     {{ end }}
 
-    <section id="main">
+    {{ if .Params.disable_profile | and .Params.disable_widgets }}
+      <section id="main" class="full-width">
+    {{ else}}
+       <section id="main">
+    {{ end }}
+
     {{ block "main" . }}{{ end }}
     </section>
 
