@@ -14,8 +14,8 @@
                 {{ .Description | default .Summary }}
             </p>
             <p class="article-more-link">
-                <a href="{{ .Permalink }}">
-                    {{with .Site.Data.l10n.articles.read_more}}{{.}}{{end}}
+                <a href="{{ .Permalink }}" lang="{{ .Lang }}">
+                    {{ i18n "articles-read-more" }}
                 </a>
             </p>
         </div>

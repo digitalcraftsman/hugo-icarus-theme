@@ -1,7 +1,7 @@
 {{ if .Site.Params.widgets.recent_articles }}
 <div class="widget-wrap">
     <h3 class="widget-title">
-        {{with .Site.Data.l10n.widgets.recent_articles.title}}{{.}}{{end}}
+        {{ i18n "widget-recents-title" }}
     </h3>
     <div class="widget">
         <ul id="recent-post">
@@ -29,7 +29,7 @@
                     {{ end }}
                     <p class="item-title"><a href="{{ .Permalink }}" class="title">{{ .Title }}</a></p>
                     <p class="item-date">
-                        <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
+                        <time datetime="{{ .Date }}" itemprop="datePublished">{{ default (i18n "date_format") .Site.Params.date_format | .Date.Format | i18n "postedOnDate" }}</time>
                     </p>
                 </div>
             </li>

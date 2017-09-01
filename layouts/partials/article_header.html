@@ -9,13 +9,13 @@
         {{ if not .Params.nodateline }}
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
+            <time datetime="{{ .Date }}" itemprop="datePublished">{{ default (i18n "date_format") .Site.Params.date_format | .Date.Format | i18n "postedOnDate" }}</time>
             &middot;
             {{ .WordCount }}
-            {{ with .Site.Data.l10n.articles.words }}{{.}}{{end}}
+            {{ i18n "words" }}.
             &middot;
             {{ .ReadingTime }}
-            {{ with .Site.Data.l10n.articles.readingtime }}{{.}}{{end}}
+            {{ i18n "readingtime" }}.
         </div>
         {{ end }}
         {{ if isset .Params "categories" }}

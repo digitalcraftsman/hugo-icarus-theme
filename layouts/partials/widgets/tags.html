@@ -3,7 +3,7 @@
 {{ if not (eq (len .Site.Taxonomies.tags) 0) }}
 <div class="widget-wrap">
     <h3 class="widget-title">
-        {{ with .Site.Data.l10n.widgets.tags.title }}{{.}}{{end}}
+        {{ i18n "tags-title" }}
     </h3>
     <div class="widget">
         <ul class="category-list">
