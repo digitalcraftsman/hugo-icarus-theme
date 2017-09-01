@@ -8,20 +8,8 @@
           <span class="site-title">{{ .Site.Title }}</span>
       </a>
       <nav id="main-nav">
-          {{ range .Site.Params.menu }}
-          {{ if .before }}
-          <a class="main-nav-link" href="{{ .link | absURL }}">{{ .label }}</a>
-          {{ end }}
-          {{ end }}
-
           {{ range .Site.Menus.main }}
           <a class="main-nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
-          {{ end }}
-
-          {{ range .Site.Params.menu }}
-          {{ if not .before }}
-          <a class="main-nav-link" href="{{ .link | absURL }}">{{ .label }}</a>
-          {{ end }}
           {{ end }}
       </nav>
         <nav id="sub-nav">
@@ -43,21 +31,9 @@
     <table class="menu outer">
       <tbody>
           <tr>
-          {{ range .Site.Params.menu }}
-          {{ if .before }}
-          <td><a class="main-nav-link" href="{{ .link | absURL }}">{{ .label }}</a></td>
-          {{ end }}
-          {{ end }}
-
           {{ range .Site.Menus.main }}
           <td><a class="main-nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a></td>
-          {{ end }}
-
-          {{ range .Site.Params.menu }}
-          {{ if not .before }}
-          <td><a class="main-nav-link" href="{{ .link  | absURL }}">{{ .label }}</a></td>
-          {{ end }}
-          {{ end }}
+           {{ end }}
           <td>
           <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
           <input type="search" name="q" class="search-form-input" placeholder="Search">
