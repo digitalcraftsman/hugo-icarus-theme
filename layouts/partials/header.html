@@ -1,7 +1,7 @@
 <header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
-      <a href="{{ .Site.BaseURL }}" id="logo">
+      <a href="{{ .Site.BaseURL | relLangURL }}" id="logo">
           {{ if .Site.Params.logo }}
           <i class="logo" style="background-image: url('{{ .Site.Params.logo | absURL }}')"></i>
           {{end}}
@@ -15,7 +15,7 @@
           {{ end }}
 
           {{ range .Site.Menus.main }}
-          <a class="main-nav-link" href="{{ .URL }}">{{ .Name }}</a>
+          <a class="main-nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           {{ end }}
 
           {{ range .Site.Params.menu }}
@@ -34,7 +34,7 @@
               <input type="search" name="q" class="search-form-input" placeholder="{{ i18n "search-placeholder"}}">
               <button type="submit" class="search-form-submit">
               </button>
-              <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL }}" />
+              <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL | relLangURL }}" />
          </form>
         </div>
     </div>
@@ -50,7 +50,7 @@
           {{ end }}
 
           {{ range .Site.Menus.main }}
-          <td><a class="main-nav-link" href="{{ .URL }}">{{ .Name }}</a></td>
+          <td><a class="main-nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a></td>
           {{ end }}
 
           {{ range .Site.Params.menu }}
@@ -61,7 +61,7 @@
           <td>
           <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
           <input type="search" name="q" class="search-form-input" placeholder="Search">
-          <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL }}" />
+          <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL | relLangURL }}" />
           </form>
         </td>
       </tr>

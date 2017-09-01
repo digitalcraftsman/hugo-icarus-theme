@@ -8,9 +8,9 @@
             {{ range first 5 (where .Site.RegularPages "Type" "post") }}
             <li>
                 <div class="item-thumbnail">
-                    <a href="{{ .Permalink }}" class="thumbnail">
+                    <a href="{{ .Permalink }}" lang="{{ .Lang }}" class="thumbnail">
                     {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
-                        <span style="background-image:url({{ .Params.banner | absURL }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
+                        <span style="background-image:url({{ .Params.banner | absLangURL }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
                     {{else}}
                         <span class="thumbnail-image thumbnail-none"></span>
                     {{ end }}
@@ -21,13 +21,13 @@
                     {{ if gt (len .Params.categories) 0 }}
                     <p class="item-category">
                         {{ $url := printf "%s/%s" "categories" (index .Params.categories 0 | urlize | lower)}}
-                        <a class="article-category-link" href="{{ $url | absURL }}">
+                        <a class="article-category-link" href="{{ $url | absLangURL }}">
                         {{ index .Params.categories 0 }}
                         </a>
                     </p>
                     {{ end }}
                     {{ end }}
-                    <p class="item-title"><a href="{{ .Permalink }}" class="title">{{ .Title }}</a></p>
+                    <p class="item-title"><a href="{{ .Permalink }}" lang="{{ .Lang }}" class="title">{{ .Title }}</a></p>
                     <p class="item-date">
                         <time datetime="{{ .Date }}" itemprop="datePublished">{{ default (i18n "date_format") .Site.Params.date_format | .Date.Format | i18n "postedOnDate" }}</time>
                     </p>

@@ -1,5 +1,5 @@
 <header class="article-header">
-    <a href="{{ .Permalink }}">
+    <a href="{{ .Permalink }}" lang="{{ .Lang }}">
     <h1 class="article-title" itemprop="name">
         {{ .Title }}
     </h1>
@@ -25,7 +25,7 @@
                 <i class="fa fa-folder"></i>
                 {{ range $k, $v := .Params.categories }}
                 {{ $url := printf "categories/%s" (. | urlize | lower) }}
-                <a class="article-category-link" href="{{ $url | absURL }}">{{ . }}</a>
+                <a class="article-category-link" href="{{ $url | absLangURL }}">{{ . }}</a>
                 {{ if lt $k (sub $categoriesLen 1) }}&middot;{{ end }}
                 {{ end }}
             </div>
@@ -39,7 +39,7 @@
                 <i class="fa fa-tags"></i>
                 {{ range $k, $v := .Params.tags }}
                 {{ $url := printf "tags/%s" (. | urlize | lower) }}
-                <a class="article-category-link" href="{{ $url | absURL }}">{{ . }}</a>
+                <a class="article-category-link" href="{{ $url | absLangURL }}">{{ . }}</a>
                 {{ if lt $k (sub $tagsLen 1) }}&middot;{{ end }}
                 {{ end }}
             </div>
