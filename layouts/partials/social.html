@@ -1,3 +1,11 @@
+{{ with .Site.Social.email }}
+<td><a href="mailto:{{.}}" target="_blank" title="E-Mail"><i class="fa fa-envelope"></i></a></td>
+{{ end }}
+
+{{ with .Site.Social.phone }}
+<td><a href="tel:{{.}}" target="_blank" title="Phone"><i class="fa fa-phone"></i></a></td>
+{{ end }}
+
 {{ with .Site.Social.github }}
 <td><a href="//github.com/{{.}}" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
 {{ end }}
