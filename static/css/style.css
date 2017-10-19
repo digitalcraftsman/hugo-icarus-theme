@@ -1816,7 +1816,12 @@ ol.toc {
   float: right ;
   display: flex;
 }
-
+@media screen and (max-width: 700px) {
+  #header .outer .right-nav {
+    position: absolute;
+    right: 86px;
+  }
+}
 #header .outer .lang-switcher-nav {
   list-style: none ;
 }
@@ -1864,12 +1869,6 @@ ol.toc {
     overflow: inherit;
     height: inherit;
     width: inherit;
-}
-
-@media screen and (max-width: 736px) {
-  #header .lang-switcher img {
-      padding: 25% 0;
-  }
 }
 
 
