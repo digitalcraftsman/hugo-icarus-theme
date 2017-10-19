@@ -50,22 +50,52 @@ theme = "hugo-icarus-theme"
 # You can define menu names according to the translation
 # See <https://gohugo.io/content-management/multilingual/#configuring-multilingual-mode>
 # for more information
+# Set up multiple languages
+DefaultContentLanguage = "en"
 
-[[menu.main]]
+[Languages]
+[Languages.en]
+LanguageName = "English"
+title = "Icarus English"
+
+[Languages.fr]
+LanguageName = "Français"
+title = "Icarus French"
+
+# Set up your menu items in the navigation bar
+# You can use identifier to prepend a font awesome icon to your text
+# Menu different for each language
+[[Languages.en.menu.main]]
     weight = 3
     label  = "Home"
     link   = "/"
-
-[[menu.main]]
+    
+[[Languages.en.menu.main]]
     weight = 2
     label  = "Tags"
     link   = "tags/"
+  
 
-[[menu.main]]
+[[Languages.en.menu.main]]
     weight = 1
     label  = "Categories"
     link   = "categories/"
 
+[[Languages.fr.menu.main]]
+    weight = 3
+    label  = "Home"
+    link   = "/"
+    
+[[Languages.fr.menu.main]]
+    weight = 2
+    label  = "Tags"
+    link   = "tags/"
+  
+[[Languages.fr.menu.main]]
+    weight = 1
+    label  = "Catégories"
+    link   = "categories/"
+    
 # Enter a link for the follow button on the left
 [params.profile]
     follow_button = "https://github.com/digitalcraftsman"
