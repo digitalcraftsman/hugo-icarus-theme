@@ -1,0 +1,74 @@
+
+[translationsLabel]
+  other = "Autres langues : "
+[translationsSeparator]
+  other = ", "
+[date_format]
+  other = "02-01-2006"
+[languageSwitcherLabel]
+  other = "Traductions"
+
+#
+# articles
+#
+[words]
+  other = "mots"
+[readingtime]
+  other = "minutes de lecture"
+[articles-share]
+  other = "Partager"
+[articles-comments]
+  other = "Commentaires"
+[articles-read-more]
+  other = "Lire la suite"
+[posts-older]
+  other = "Plus ancien"
+[posts-newer]
+  other = "Plus récent"
+[postedOnDate]
+  other = "posté le {{ .Count }}"
+
+#
+# widgets
+#
+[widget-cat-title]
+  other = "Catégories"
+[widget-recents-title]
+  other = "Récents"
+[tags-title]
+  other = "Tags"
+[tag-cloud-title]
+  other = "Tag cloud"
+
+#
+# Header
+#
+[search-placeholder]
+  other = "Recherche"
+
+#
+# Pagination
+#
+[pagination-previous]
+  other = "Précédent"
+[pagination-next]
+  other = "Suivant"
+
+#
+# Profile
+#
+[profile-follow-button]
+  other = "Suivre"
+[profile-posts]
+  other = "Articles"
+[profile-tags]
+  other = "Tags"
+
+#
+# 404 Page not found
+#
+[page-not-found-title]
+  other = "404 - page non trouvée"
+[page-not-found-subtitle]
+  other = "Le contenu que vous cherchez ne semble pas exister."
+

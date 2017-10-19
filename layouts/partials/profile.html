@@ -10,15 +10,15 @@
       {{ with .Site.Params.bio }}<h3 id="title">{{ . }}</h3>{{ end }}
       {{ with .Site.Params.location }}<span id="location"><i class="fa fa-map-marker"></i>{{ . }}</span>{{ end }}
       {{ with .Site.Params.profile.follow_button }}
-          <a id="follow" href="{{ . }}">
-              {{with $.Site.Data.l10n.profile.follow_button}}{{.}}{{end}}
+          <a id="follow" href="{{ $.Site.LanguagePrefix }}/{{ . }}">
+              {{ i18n "profile-follow-button"}}
           </a>
       {{ end }}
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
         {{ len (where .Site.RegularPages "Type" "post") }}
-        <span>{{with .Site.Data.l10n.profile.posts}}{{.}}{{end}}</span>
+        <span>{{ i18n "profile-posts"}}</span>
       </div>
       <div class="article-info-block">
         {{ if isset .Site.Taxonomies "tags" }}
@@ -27,7 +27,7 @@
           0
         {{ end }}
         <span>
-            {{with .Site.Data.l10n.profile.tags}}{{.}}{{end}}
+            {{ i18n "profile-tags"}}
         </span>
       </div>
     </div>

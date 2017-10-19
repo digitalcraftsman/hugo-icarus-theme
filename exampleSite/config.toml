@@ -1,5 +1,4 @@
 baseurl = "https://example.org/"
-languageCode = "en-us"
 title = "Icarus"
 # Enable comments by entering your Disqus shortname
 disqusShortname = "spf13"
@@ -9,8 +8,8 @@ googleAnalytics = ""
 paginate = 10
 footnotereturnlinkcontents = "↩"
 theme = "hugo-icarus-theme"
-# Comment the themesDir option if you use this theme in production
-themesDir = "../.."
+# Uncomment the themesDir option if you do not use this theme in production
+# themesDir = "../.."
 
 
 [permalinks]
@@ -41,24 +40,29 @@ themesDir = "../.."
 	custom_css = []
 	custom_js  = []
 
-# Create custom menu entries by defining a label and a link for
-# them. Since you can also link posts, you've the option the
-# place the links before or after them.
+# Create custom menu entries by defining a name and a url for
+# them. Since you can also link posts, you can use the weight
+# to define order of appearance.
 #
 # E.g.: "Home" appears before all linked posts in the menu
 # and "Tags" / "Categories" after them.
-[[params.menu]]
-    before = true
+#
+# You can define menu names according to the translation
+# See <https://gohugo.io/content-management/multilingual/#configuring-multilingual-mode>
+# for more information
+
+[[menu.main]]
+    weight = 3
     label  = "Home"
     link   = "/"
 
-[[params.menu]]
-    before = false
+[[menu.main]]
+    weight = 2
     label  = "Tags"
     link   = "tags/"
 
-[[params.menu]]
-    before = false
+[[menu.main]]
+    weight = 1
     label  = "Categories"
     link   = "categories/"
 
@@ -99,9 +103,14 @@ themesDir = "../.."
     facebook_admin  = ""
     twitter_domain  = ""
     twitter         = "spf13"
+    googlescholar   = ""
+    orcid           = ""
+
+    
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
+    language_switcher = true
     recent_articles = true
     categories = true
     tags = true

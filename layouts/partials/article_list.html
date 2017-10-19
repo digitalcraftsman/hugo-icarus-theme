@@ -3,8 +3,8 @@
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
-        <a href="{{ .Permalink }}" itemprop="url">
-            <img src="{{ .Params.banner | absURL }}" class="article-banner">
+        <a href="{{ .Permalink }}" lang="{{ .Lang }}" itemprop="url">
+            <img src="{{ .Params.banner | absLangURL }}" class="article-banner">
         {{ end }}
         </a>
 
@@ -14,8 +14,8 @@
                 {{ .Description | default .Summary }}
             </p>
             <p class="article-more-link">
-                <a href="{{ .Permalink }}">
-                    {{with .Site.Data.l10n.articles.read_more}}{{.}}{{end}}
+                <a href="{{ .Permalink }}" lang="{{ .Lang }}">
+                    {{ i18n "articles-read-more" }}
                 </a>
             </p>
         </div>

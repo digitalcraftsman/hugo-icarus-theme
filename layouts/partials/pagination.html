@@ -1,13 +1,13 @@
 <nav id="page-nav">
 {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
     {{ if .Paginator.HasPrev }}
-        <a class="extend prev" rel="prev" href="{{ .Paginator.Prev.URL | absURL }}">
-            « {{ with .Site.Data.l10n.pagination.previous }}{{ . }}{{ end }}
+        <a class="extend prev" rel="prev" href="{{ .Paginator.Prev.URL | absLangURL }}">
+            « {{ i18n "pagination-previous" }}
         </a>
     {{ end }}
     {{ if .Paginator.HasNext }}
-        <a class="extend next" rel="next" href="{{ .Paginator.Next.URL | absURL }}">
-            {{ with .Site.Data.l10n.pagination.next }}{{ . }}{{ end }} »
+        <a class="extend next" rel="next" href="{{ .Paginator.Next.URL | absLangURL }}">
+            {{ i18n "pagination-next" }} »
         </a>
     {{ end }}
 {{ end }}

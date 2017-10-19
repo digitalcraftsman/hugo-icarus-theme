@@ -1,11 +1,11 @@
 <footer class="article-footer">
-    <a data-url="{{ .Permalink }}" data-id="{{ .UniqueID }}" class="article-share-link">
+    <a data-url="{{ .Permalink }} " lang="{{ .Lang }}" data-id="{{ .UniqueID }}" class="article-share-link">
         <i class="fa fa-share"></i>
-        {{with .Site.Data.l10n.articles.share}}{{.}}{{end}}
+        {{ i18n "articles-share" }}
     </a>
     {{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
-    <a href="{{ .Permalink }}#disqus_thread" class="article-comment-link">
-        {{with .Site.Data.l10n.articles.comments}}{{.}}{{end}}
+    <a href="{{ .Permalink }}#disqus_thread" lang="{{ .Lang }}" class="article-comment-link">
+        {{i18n "articles-comments"}}
     </a>
     {{end}}
 
