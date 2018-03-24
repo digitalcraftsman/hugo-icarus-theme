@@ -4,7 +4,7 @@
       {{ with .Site.Params.gravatar }}
       <img id="avatar" src="https://www.gravatar.com/avatar/{{ . | md5 }}?s=100&d=identicon"/>
       {{ else }}
-      <img id="avatar" src="{{ .Site.Params.avatar | absURL }}">
+      <img id="avatar" src="{{ .Site.Params.avatar | default "css/images/avatar.png" | absURL }}">
       {{ end }}
       {{ with .Site.Params.author}}<h2 id="name">{{ . }}</h2>{{ end }}
       {{ with .Site.Params.bio }}<h3 id="title">{{ . }}</h3>{{ end }}

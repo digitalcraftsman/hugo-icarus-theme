@@ -9,7 +9,7 @@
         {{ if not .Params.nodateline }}
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
+            <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format (.Site.Params.date_format | default "2006-01-02") }}</time>
             &middot;
             {{ .WordCount }}
             {{ with .Site.Data.l10n.articles.words }}{{.}}{{end}}
