@@ -6,6 +6,10 @@
 
         {{ partial "article_header" . }}
         <div class="article-entry" itemprop="articleBody">
+            {{ if .Params.toc }}
+                <h2>Table Of Contents</h2>
+                {{ .TableOfContents }}
+            {{ end }}
             {{ .Content }}
         </div>
         {{ partial "article_footer" . }}
