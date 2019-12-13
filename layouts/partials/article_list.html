@@ -1,4 +1,4 @@
-{{ $paginator := .Paginate (where .Data.Pages "Section" "in" .Site.Params.mainSections) }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" site.Params.mainSections) }}
 {{ range $paginator.Pages }}
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
