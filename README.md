@@ -2,6 +2,9 @@
 
 Icarus is a responsive and customizable theme for bloggers. It's a port of the same-named theme for [Hexo](//hexo.io) made by [Ruipeng Zhang](https://github.com/ppoffice). Noteworthy features of this Hugo theme are the integration of a comment-system powered by Disqus, localization (l10n) support, syntax highlighting for source code and optional widgets for the sidebar.
 
+### Please note that this theme is no longer maintained. 
+*A maintained fork of this theme can be found at [gitlab.com/toryanderson/hugo-icarus](https://gitlab.com/toryanderson/hugo-icarus)*
+
 ![](https://raw.githubusercontent.com/digitalcraftsman/hugo-icarus-theme/master/images/screenshot.png)
 
 ## Get the theme
