@@ -140,6 +140,12 @@ This shortcode you to easily include a gallery into your pages. Copy the code be
     >}}
 
 
+### SlideShare
+
+Embed SlideShare slides by passing its `id`. For example, if the slides' URL is `https://www.slideshare.net/<username>/<title-slug>-12345678`, then the shortcode looks like this:
+
+    {{< slideshare id="12345678" >}}
+
 ## Nearly finished
 
 In order to see your site in action, run Hugo's built-in local server.
@@ -161,7 +167,7 @@ This theme is released under the MIT license. For more information read the [lic
 
 ## Acknowledgements
 
-Thanks to 
+Thanks to
 
 - [Ruipeng Zhang](https://github.com/ppoffice) for creating this theme
 - [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project
