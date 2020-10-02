@@ -51,16 +51,19 @@ themesDir = "../.."
     before = true
     label  = "Home"
     link   = "/"
+    icon   = "home"
 
 [[params.menu]]
     before = false
     label  = "Tags"
     link   = "tags/"
+    icon   = "tags"
 
 [[params.menu]]
     before = false
     label  = "Categories"
     link   = "categories/"
+    icon   = "list-ul"
 
 # Enter a link for the follow button on the left
 [params.profile]
