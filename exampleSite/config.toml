@@ -1,5 +1,4 @@
 baseurl = "https://example.org/"
-languageCode = "en-us"
 title = "Icarus"
 # Enable comments by entering your Disqus shortname
 disqusShortname = "spf13"
@@ -9,8 +8,8 @@ googleAnalytics = ""
 paginate = 10
 footnotereturnlinkcontents = "↩"
 theme = "hugo-icarus-theme"
-# Comment the themesDir option if you use this theme in production
-themesDir = "../.."
+# Uncomment the themesDir option if you do not use this theme in production
+# themesDir = "../.."
 
 
 [permalinks]
@@ -41,27 +40,62 @@ themesDir = "../.."
 	custom_css = []
 	custom_js  = []
 
-# Create custom menu entries by defining a label and a link for
-# them. Since you can also link posts, you've the option the
-# place the links before or after them.
+# Create custom menu entries by defining a name and a url for
+# them. Since you can also link posts, you can use the weight
+# to define order of appearance.
 #
 # E.g.: "Home" appears before all linked posts in the menu
 # and "Tags" / "Categories" after them.
-[[params.menu]]
-    before = true
+#
+# You can define menu names according to the translation
+# See <https://gohugo.io/content-management/multilingual/#configuring-multilingual-mode>
+# for more information
+# Set up multiple languages
+DefaultContentLanguage = "en"
+
+[Languages]
+[Languages.en]
+LanguageName = "English"
+title = "Icarus English"
+
+[Languages.fr]
+LanguageName = "Français"
+title = "Icarus French"
+
+# Set up your menu items in the navigation bar
+# You can use identifier to prepend a font awesome icon to your text
+# Menu different for each language
+[[Languages.en.menu.main]]
+    weight = 3
     label  = "Home"
     link   = "/"
-
-[[params.menu]]
-    before = false
+    
+[[Languages.en.menu.main]]
+    weight = 2
     label  = "Tags"
     link   = "tags/"
+  
 
-[[params.menu]]
-    before = false
+[[Languages.en.menu.main]]
+    weight = 1
     label  = "Categories"
     link   = "categories/"
 
+[[Languages.fr.menu.main]]
+    weight = 3
+    label  = "Home"
+    link   = "/"
+    
+[[Languages.fr.menu.main]]
+    weight = 2
+    label  = "Tags"
+    link   = "tags/"
+  
+[[Languages.fr.menu.main]]
+    weight = 1
+    label  = "Catégories"
+    link   = "categories/"
+    
 # Enter a link for the follow button on the left
 [params.profile]
     follow_button = "https://github.com/digitalcraftsman"
@@ -99,9 +133,14 @@ themesDir = "../.."
     facebook_admin  = ""
     twitter_domain  = ""
     twitter         = "spf13"
+    googlescholar   = ""
+    orcid           = ""
+
+    
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
+    language_switcher = true
     recent_articles = true
     categories = true
     tags = true

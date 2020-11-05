@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+<html lang="{{ .Lang }}">
 <head>
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
     {{ .Hugo.Generator }}
@@ -12,10 +12,10 @@
       <meta name="description" content="{{ .Site.Params.site_description }}">
     {{ end }}
     {{ with .RSSLink }}
-      <link href="{{ . }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
-      <link href="{{ . }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+      <link href="{{ $.Site.LanguagePrefix }}/{{ . }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+      <link href="{{ $.Site.LanguagePrefix }}/{{ . }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
     {{ end }}
-    <link rel="canonical" href="{{ .Permalink }}"/>
+    <link rel="canonical" href="{{ .URL | absLangURL }}"/>
     <link rel="icon" href="{{ "favicon.ico" | absURL }}">
     <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}"/>
     <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">

@@ -19,7 +19,7 @@ You should see a folder called `hugo-icarus-theme` inside the `themes` directory
 
 ## Setup
 
-Next, navigate to the `exampleSite` folder at `themes/hugo-type-theme/exampleSite/`.  In order to get your site running, you need to copy `config.toml` and all the content of all relevant subfolders such as `data/l10n.toml` into the root folders.
+Next, navigate to the `exampleSite` folder at `themes/hugo-type-theme/exampleSite/`.  In order to get your site running, you need to copy `config.toml` and all the content of all relevant subfolders such as `i18n/en.toml` into the root folders.
 
 To turn the `exampleSite` folder in a standalone demo site the `themesDir` property has been set to `../..`. This way you can preview this theme by running `hugo server` inside `exampleSite` folder.
 
@@ -106,10 +106,18 @@ The date line includes: post date, # of words, approximate reading, time tags an
 
 To disable the inclusion of a previous/next article link at the bottom of the page, add `noprevnext = true` to the front matter. This feature, along with `nodateline` can be used to create standalone pages that are less "blog-like"
 
-## Localization (l10n)
+## Localization (i18n)
 
-You don't blog in English and you want to translate the theme into your native locale? No problem. Take a look in the `data` folder and you'll find a file `l10n.toml` that we've copied at the beginning. It contains all strings related to the theme. Just replace the original strings with your own.
+You don't blog in English and you want to translate the theme into different language? No problem. Take a look in the `i18n` folder and you'll find a file `en.toml` that we've copied at the beginning. It contains all strings related to the theme. Copy this file, change the name so that it reflects the translation language (like `fr.toml`) and modify the strings needed.
 
+
+A language switcher is also available with multilingual website activated. You can add png images of flags named 'lang.png' in 'static/flags' folder, for new languages other than English and French.
+
+The `config.toml` file in `exampleSite` proposes menus for a second language (French). However, as no posts, itemized or contacts are saved with `.fr.md` extension in this exampleSite, menu items may redirect to the `404 not found` page.
+
+If you only have one language for your website, you can remove every `Languages`, `Languages.en` and `Languages.fr` occurences. Simple `[menu.main]` have to be used instead.
+
+Credit: [statnmap]
 
 ## Linking thumbnails
 

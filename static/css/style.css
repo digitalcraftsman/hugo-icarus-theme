@@ -1810,6 +1810,68 @@ ol.toc {
 .widget ol:not(#recent-post) li a:hover:before {
   color: #333;
 }
+
+/* Multi-language */
+#header .outer .right-nav {
+  float: right ;
+  display: flex;
+}
+@media screen and (max-width: 700px) {
+  #header .outer .right-nav {
+    position: absolute;
+    right: 86px;
+  }
+}
+#header .outer .lang-switcher-nav {
+  list-style: none ;
+}
+#header .outer .lang-switcher {
+  position: relative ;
+}
+#header .outer .lang-switcher > a {
+  overflow: inherit;
+  opacity: 1;
+  display: block;
+  height: 100%;
+}
+#header .outer .lang-switcher ul li > a {
+  overflow: inherit;
+  opacity: 1;
+  display: block;
+  height: 100%;
+}
+#header .outer .lang-switcher .dropdown-menu {
+    padding: 0;
+    position: absolute;
+    z-index: 99999;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    top: 100%;
+    display: grid;
+}
+#header .outer .lang-switcher .dropdown-menu li {
+    background-color: white;
+}
+#header .lang-switcher img {
+    display: block;
+    margin: auto;
+    padding: 19.5px 15px;
+    height: 25px;
+}
+
+#header .outer .lang-switcher:hover > ul, 
+#header .outer .lang-switcher:hover > ul, 
+#header .outer .lang-switcher:focus > ul, 
+#header .outer .focus > ul {
+    clip: inherit;
+    overflow: inherit;
+    height: inherit;
+    width: inherit;
+}
+
+
 #toTop {
   display: none;
   cursor: pointer;

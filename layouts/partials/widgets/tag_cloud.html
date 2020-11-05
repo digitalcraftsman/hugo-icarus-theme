@@ -3,12 +3,12 @@
 {{ if not (eq (len .Site.Taxonomies.tags) 0) }}
 <div class="widget-wrap">
     <h3 class="widget-title">
-        {{with .Site.Data.l10n.widgets.tag_cloud.title}}{{.}}{{end}}
+        {{ i18n "tag-cloud-title" }}
     </h3>
     <div class="widget tagcloud">
         {{ range $name, $items := .Site.Taxonomies.tags }}
         {{ $url := printf "%s/%s" "tags" ($name | urlize | lower)}}
-        <a href="{{ $url | absURL }}" style="font-size: 12px;">{{ $name }}</a>
+        <a href="{{ $url | absLangURL }}" style="font-size: 12px;">{{ $name }}</a>
         {{ end }}
     </div>
 </div>

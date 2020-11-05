@@ -2,22 +2,23 @@
     <div class="archive-article-inner">
         <div class="archive-article-thumbnail">
             {{ if isset .Params "banner" }}
-            <a href="{{ .Permalink }}" class="thumbnail">
+            <a href="{{ .Permalink }}" lang="{{ .Lang }}" class="thumbnail">
                 <span style="background-image:url({{ .Params.banner | absURL }})" alt="{{ .Title }}" class="thumbnail-image"></span>
             </a>
             {{ else }}
-            <a href="{{ .Permalink }}" class="thumbnail">
+            <a href="{{ .Permalink }}" lang="{{ .Lang }}" class="thumbnail">
                 <span class="thumbnail-image thumbnail-none"></span>
             </a>
             {{ end }}
         </div>
         <header class="archive-article-header">
             <h1 itemprop="name">
-            <a class="archive-article-title" href="{{ .Permalink }}">{{ .Title }}</a>
+            <a class="archive-article-title" href="{{ .Permalink }}" lang="{{ .Lang }}">{{ .Title }}</a>
             </h1>
             <div class="archive-article-date">
                 <i class="fa fa-calendar"></i>
-                <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
+                <time datetime="{{ .Date }}" itemprop="datePublished">
+{{ default (i18n "date_format") .Site.Params.date_format | .Date.Format | i18n "postedOnDate" }}</time>
             </div>
         </header>
     </div>
