@@ -9,7 +9,7 @@
             <span class="archive-category">{{ .Title }}</span>
         </div>
         <div class="archives">
-            {{ $paginator := .Paginate .Data.Pages }}
+            {{ $paginator := .Paginate .Site.RegularPages }}
             {{ range $paginator.Pages }}
                 {{ .Render "summary" }} 
             {{ end }}

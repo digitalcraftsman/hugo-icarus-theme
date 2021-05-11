@@ -1,23 +1,29 @@
 {{ partial "head" . }}
 
 <div id="container">
-	{{ partialCached "header" . }}
-   	
-   	<div class="outer">
-   	{{ if not .Params.disable_profile }}
-    	{{ partialCached "profile" . }}
+    {{ partialCached "header" . }}
+
+    <div class="outer">
+    {{ if not .Params.disable_profile }}
+        {{ partialCached "profile" . }}
     {{ end }}
 
-    <section id="main">
+    {{ if .Params.disable_profile | and .Params.disable_widgets }}
+        <section id="main" class="full-width">
+    {{ else}}
+        <section id="main">
+    {{ end }}
+
     {{ block "main" . }}{{ end }}
-    </section>
+        </section>
 
-   	{{ if not .Params.disable_widgets }}
-    	{{ partial "sidebar" . }}
+    {{ if not .Params.disable_widgets }}
+        {{ partial "sidebar" . }}
     {{ end }}
-	</div>
+    </div>
 </div>
 
 {{ partialCached "footer" . }}
 </body>
 </html>
+
