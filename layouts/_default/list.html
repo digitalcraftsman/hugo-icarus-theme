@@ -1,8 +1,39 @@
 {{ define "main" }}
     {{ $context := . }}
     
-    {{ with .Content }}
-        {{ partial "single_article.html" $context }}
+{{ with .Content }}
+
+<article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        {{ if and (isset $context.Params "banner") (not (eq $context.Params.banner "")) }}
+            <img src="{{ .Params.banner | absURL }}" class="article-banner">
+        {{ end }}
+
+	    <header class="article-header">
+	      
+	      <a href="{{ $context.Permalink }}">
+		<h1 class="article-title" itemprop="name">
+		  {{ $context.Title }}
+		</h1>
+	      </a>
+	      </header>
+
+    
+        <div class="article-entry" itemprop="articleBody">
+            {{ $context.Content }}
+
+	</div>
+	
+	<div class="article-header">
+            {{ $paginator := $context.Paginate $context.Data.Pages}}
+            {{ range $paginator.Pages.ByTitle }}
+                {{ .Render "summary" }} 
+            {{ end }}
+	     {{ partial "pagination" $context }}
+	     </div>
+</div>
+</article>
+
     {{ else }}
     <section class="archives-wrap">
         <div class="archive-category-wrap">
