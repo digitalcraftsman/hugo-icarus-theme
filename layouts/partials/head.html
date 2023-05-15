@@ -2,7 +2,7 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 <head>
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
-    {{ .Hugo.Generator }}
+    {{ hugo.Generator }}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
@@ -11,7 +11,7 @@
     {{ else }}
       <meta name="description" content="{{ .Site.Params.site_description }}">
     {{ end }}
-    {{ with .RSSLink }}
+    {{ with .RelPermalink }}
       <link href="{{ . }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
       <link href="{{ . }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
     {{ end }}
@@ -28,7 +28,6 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     {{ template "_internal/opengraph.html" . }}
-    {{ template "_internal/google_news.html" . }}
     {{ template "_internal/schema.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
     {{ partial "head_custom" . }}
@@ -44,5 +43,6 @@
     <!-- needs to be loaded first for following scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
+{{ template "_internal/google_analytics.html" . }}
 <body>
 <div class="container">
